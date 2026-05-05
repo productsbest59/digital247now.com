@@ -1,462 +1,247 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIGITAL 247 NOW | Web Design • Organic SEO • Growth</title>
+<meta name="description" content="Professional web design, organic SEO and digital growth solutions.">
+<link rel="icon" type="image/png" href="247.png">
+<link rel="apple-touch-icon" href="247.png">
 
-  <title>DIGITAL 247 NOW | Web Design • Organic SEO • Growth</title>
-  <meta name="description" content="Professional websites, organic SEO, and digital growth solutions." />
+<style>
+:root{
+  --bg:#050b16;
+  --bg2:#0b1628;
+  --card:rgba(255,255,255,.08);
+  --line:rgba(255,255,255,.14);
+  --text:#fff;
+  --muted:#b8c6d9;
+  --accent:#19b8df;
+  --accent2:#6ee7ff;
+}
 
-  <link rel="icon" type="image/png" href="247.png">
-  <link rel="apple-touch-icon" href="247.png">
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:
+    radial-gradient(circle at 20% 10%,rgba(25,184,223,.35),transparent 28%),
+    radial-gradient(circle at 85% 30%,rgba(110,231,255,.18),transparent 32%),
+    linear-gradient(135deg,var(--bg),var(--bg2));
+  color:var(--text);
+  overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}
 
-  <style>
-    :root{
-      --bg:#07111f;
-      --bg2:#0f2138;
-      --bg3:#102a44;
-      --card:rgba(255,255,255,0.075);
-      --card2:rgba(255,255,255,0.11);
-      --accent:#22b8d8;
-      --accent2:#38bdf8;
-      --text:#ffffff;
-      --muted:#cbd5e1;
-      --line:rgba(255,255,255,0.12);
-      --shadow:0 22px 70px rgba(0,0,0,.35);
-    }
+body.large-text{font-size:120%}
+body.readable-font{font-family:Verdana,sans-serif}
+body.high-contrast{background:#000!important;color:#ff0!important}
+body.highlight-links a{background:#ff0;color:#000!important;padding:3px 6px;border-radius:6px}
 
-    *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-    html,body{width:100%;overflow-x:hidden}
+header{
+  position:sticky;top:0;z-index:1000;
+  min-height:92px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 6%;
+  background:rgba(4,10,22,.86);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+.logo img{
+  width:260px;
+  max-width:55vw;
+  height:auto;
+  display:block;
+}
+nav{display:flex;gap:28px;align-items:center}
+nav a{font-weight:800;color:#eaf7ff;font-size:.95rem}
+.lang-toggle{
+  border:0;border-radius:999px;padding:11px 18px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#001018;font-weight:900;cursor:pointer;
+  box-shadow:0 0 22px rgba(25,184,223,.35);
+}
 
-    body{
-      font-family:Arial, Helvetica, sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(circle at 15% 15%, rgba(34,184,216,.28), transparent 28%),
-        radial-gradient(circle at 85% 5%, rgba(56,189,248,.18), transparent 28%),
-        linear-gradient(135deg,var(--bg),var(--bg2) 48%,var(--bg3));
-      min-height:100vh;
-      transition:.25s ease;
-    }
+.hero{
+  min-height:calc(100vh - 92px);
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  align-items:center;
+  gap:50px;
+  padding:80px 6%;
+}
+.hero-copy h1{
+  font-size:clamp(3.2rem,7vw,7.2rem);
+  line-height:.92;
+  letter-spacing:2px;
+  text-shadow:0 0 35px rgba(255,255,255,.15);
+}
+.hero-copy h2{
+  margin-top:24px;
+  font-size:clamp(1.2rem,2.5vw,2rem);
+  color:var(--accent2);
+}
+.hero-copy p{
+  margin-top:22px;
+  max-width:680px;
+  color:var(--muted);
+  font-size:1.15rem;
+  line-height:1.8;
+}
+.hero-buttons{display:flex;gap:16px;flex-wrap:wrap;margin-top:34px}
+.btn{
+  padding:15px 24px;border-radius:16px;font-weight:900;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#001018;
+  box-shadow:0 0 28px rgba(25,184,223,.32);
+}
+.btn-secondary{border:1px solid var(--line);color:#fff;background:rgba(255,255,255,.06)}
 
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      pointer-events:none;
-      background-image:
-        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
-      background-size:46px 46px;
-      mask-image:linear-gradient(to bottom, rgba(0,0,0,.8), transparent 85%);
-      z-index:-1;
-    }
+.hero-visual{
+  border:1px solid var(--line);
+  border-radius:34px;
+  padding:36px;
+  background:linear-gradient(145deg,rgba(255,255,255,.10),rgba(255,255,255,.03));
+  box-shadow:0 30px 80px rgba(0,0,0,.38);
+}
+.hero-visual img{width:100%;display:block;border-radius:22px}
 
-    body.light-mode{
-      background:#f8fafc;
-      color:#111827;
-    }
-    body.high-contrast{background:#000!important;color:#ff0!important}
-    body.large-text{font-size:120%}
-    body.readable-font{font-family:Verdana,Arial,sans-serif}
-    body.highlight-links a{background:yellow;color:#000!important;padding:2px 5px;border-radius:4px}
+section{padding:90px 6%}
+.section-title{
+  text-align:center;
+  font-size:clamp(2rem,4vw,3.3rem);
+  margin-bottom:44px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(245px,1fr));
+  gap:24px;
+}
+.card{
+  background:linear-gradient(145deg,rgba(255,255,255,.11),rgba(255,255,255,.045));
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:30px;
+  box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+.card h3{color:var(--accent2);margin-bottom:14px;font-size:1.35rem}
+.card p{color:var(--muted);line-height:1.75}
 
-    a{text-decoration:none;color:inherit}
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:26px;
+  max-width:1220px;
+  margin:auto;
+}
+.portfolio-card{padding:18px}
+.site-preview{
+  height:225px;
+  overflow:hidden;
+  border-radius:20px;
+  border:1px solid var(--line);
+  background:#07101f;
+}
+.site-preview iframe{
+  width:1200px;
+  height:850px;
+  border:0;
+  transform:scale(.30);
+  transform-origin:top left;
+}
+.portfolio-actions{margin-top:18px}
+.portfolio-actions a{
+  display:inline-block;
+  background:var(--accent);
+  color:#001018;
+  font-weight:900;
+  padding:11px 17px;
+  border-radius:13px;
+}
 
-    header{
-      position:sticky;
-      top:0;
-      z-index:999;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-      padding:14px 5%;
-      background:rgba(7,17,31,.72);
-      backdrop-filter:blur(18px);
-      border-bottom:1px solid var(--line);
-    }
+.process{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:20px;
+}
+.step span{
+  display:inline-flex;width:42px;height:42px;border-radius:50%;
+  align-items:center;justify-content:center;
+  background:var(--accent);color:#001018;font-weight:900;margin-bottom:14px;
+}
 
-    .logo{
-      display:flex;
-      align-items:center;
-      min-width:190px;
-    }
+.contact-wrap{
+  max-width:900px;margin:auto;
+  background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.04));
+  border:1px solid var(--line);
+  border-radius:34px;
+  padding:38px;
+}
+form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+input,select,textarea{
+  width:100%;border:1px solid rgba(255,255,255,.16);
+  background:rgba(255,255,255,.08);
+  color:white;
+  border-radius:15px;
+  padding:16px;
+  font-size:1rem;
+}
+option{color:#000}
+textarea{grid-column:span 2;min-height:150px;resize:vertical}
+form button{
+  grid-column:span 2;
+  border:0;border-radius:16px;padding:16px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#001018;font-weight:900;font-size:1rem;cursor:pointer;
+}
 
-    .logo img{
-      width:230px;
-      max-width:54vw;
-      height:auto;
-      display:block;
-      filter:drop-shadow(0 10px 28px rgba(0,0,0,.38));
-    }
+.float-access,.float-whatsapp{
+  position:fixed;bottom:22px;width:62px;height:62px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  z-index:9999;font-size:27px;box-shadow:0 8px 28px rgba(0,0,0,.45);
+}
+.float-access{left:22px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#001018;cursor:pointer}
+.float-whatsapp{right:22px;background:#25D366;color:white}
 
-    nav{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:28px;
-    }
+.access-panel{
+  position:fixed;left:22px;bottom:96px;width:300px;
+  display:none;z-index:9999;
+  background:#07101f;border:1px solid var(--line);
+  border-radius:22px;padding:18px;
+}
+.access-panel button{
+  width:100%;margin:6px 0;padding:12px;border:0;border-radius:12px;
+  font-weight:800;cursor:pointer;
+}
 
-    nav a{
-      color:#fff;
-      font-weight:800;
-      font-size:.95rem;
-      opacity:.94;
-    }
+footer{text-align:center;padding:42px 20px;color:var(--muted);border-top:1px solid var(--line)}
 
-    nav a:hover{color:var(--accent2)}
-
-    .lang-toggle{
-      border:1px solid rgba(255,255,255,.25);
-      background:linear-gradient(135deg,var(--accent2),var(--accent));
-      color:#001018;
-      padding:10px 16px;
-      border-radius:999px;
-      cursor:pointer;
-      font-weight:900;
-      box-shadow:0 10px 25px rgba(34,184,216,.25);
-      white-space:nowrap;
-    }
-
-    .hero{
-      min-height:76vh;
-      display:grid;
-      place-items:center;
-      text-align:center;
-      padding:70px 20px 40px;
-    }
-
-    .hero-inner{
-      max-width:980px;
-      margin:auto;
-    }
-
-    .hero-kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:9px 14px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.06);
-      border-radius:999px;
-      color:var(--accent2);
-      font-weight:800;
-      margin-bottom:22px;
-    }
-
-    .hero h1{
-      font-size:clamp(2.8rem,7vw,6.2rem);
-      line-height:.95;
-      letter-spacing:2px;
-      margin-bottom:18px;
-    }
-
-    .hero h1 span{color:var(--accent2)}
-
-    .hero h2{
-      font-size:clamp(1.25rem,2.2vw,1.8rem);
-      color:var(--accent2);
-      margin-bottom:20px;
-      font-weight:800;
-    }
-
-    .hero p{
-      max-width:790px;
-      margin:0 auto;
-      color:var(--muted);
-      font-size:1.15rem;
-      line-height:1.75;
-    }
-
-    .hero-buttons{
-      margin-top:34px;
-      display:flex;
-      justify-content:center;
-      gap:15px;
-      flex-wrap:wrap;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:14px 22px;
-      min-width:170px;
-      border-radius:16px;
-      font-weight:900;
-      transition:.2s ease;
-    }
-
-    .btn:hover{transform:translateY(-2px)}
-    .btn-primary{background:linear-gradient(135deg,var(--accent2),var(--accent));color:#001018}
-    .btn-secondary{border:1px solid var(--line);background:rgba(255,255,255,.055);color:#fff}
-
-    section{padding:78px 5%}
-    .section-title{
-      text-align:center;
-      font-size:clamp(2rem,4vw,3rem);
-      margin-bottom:44px;
-      letter-spacing:.5px;
-    }
-
-    .services-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:24px;
-      max-width:1160px;
-      margin:auto;
-    }
-
-    .card{
-      background:linear-gradient(180deg,var(--card2),var(--card));
-      border:1px solid var(--line);
-      border-radius:26px;
-      padding:28px;
-      box-shadow:var(--shadow);
-      backdrop-filter:blur(14px);
-    }
-
-    .card h3{color:var(--accent2);margin-bottom:12px;font-size:1.35rem}
-    .card p{color:var(--muted);line-height:1.7}
-
-    .process-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-      gap:20px;
-      max-width:1100px;
-      margin:auto;
-    }
-
-    .step{
-      padding:24px;
-      border-radius:24px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.055);
-    }
-    .step strong{color:var(--accent2);display:block;margin-bottom:10px}
-
-    .portfolio-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(285px,1fr));
-      gap:24px;
-      max-width:1180px;
-      margin:0 auto;
-    }
-
-    .portfolio-card{
-      background:linear-gradient(180deg,rgba(255,255,255,.115),rgba(255,255,255,.065));
-      border:1px solid var(--line);
-      border-radius:26px;
-      padding:18px;
-      box-shadow:var(--shadow);
-      overflow:hidden;
-    }
-
-    .site-preview{
-      width:100%;
-      height:270px;
-      overflow:hidden;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,.14);
-      background:#0b1220;
-      position:relative;
-    }
-
-    .site-preview iframe{
-      width:100%;
-      height:100%;
-      border:0;
-      display:block;
-      background:#fff;
-    }
-
-    .portfolio-card h3{margin-top:16px;color:var(--accent2);font-size:1.35rem}
-    .portfolio-card p{margin-top:8px;color:var(--muted);line-height:1.55}
-
-    .portfolio-actions{
-      margin-top:15px;
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-
-    .portfolio-actions a{
-      display:inline-flex;
-      padding:10px 15px;
-      border-radius:13px;
-      background:var(--accent2);
-      color:#001018;
-      font-weight:900;
-      font-size:.92rem;
-    }
-
-    .contact-wrap{
-      max-width:980px;
-      margin:auto;
-      display:grid;
-      grid-template-columns:1fr 1.4fr;
-      gap:24px;
-      align-items:stretch;
-    }
-
-    .contact-info{
-      background:linear-gradient(180deg,rgba(34,184,216,.18),rgba(255,255,255,.06));
-      border:1px solid var(--line);
-      border-radius:28px;
-      padding:32px;
-      box-shadow:var(--shadow);
-    }
-
-    .contact-info h3{font-size:1.7rem;margin-bottom:14px}
-    .contact-info p{color:var(--muted);line-height:1.75;margin-bottom:18px}
-
-    .contact-section{
-      background:linear-gradient(180deg,var(--card2),var(--card));
-      border:1px solid var(--line);
-      padding:32px;
-      border-radius:28px;
-      box-shadow:var(--shadow);
-      backdrop-filter:blur(14px);
-    }
-
-    .contact-form{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:16px;
-    }
-
-    .contact-form input,
-    .contact-form select,
-    .contact-form textarea{
-      width:100%;
-      padding:15px;
-      border:none;
-      outline:none;
-      border-radius:14px;
-      font-size:1rem;
-      background:rgba(255,255,255,.94);
-      color:#0f172a;
-    }
-
-    .contact-form textarea{
-      grid-column:span 2;
-      min-height:155px;
-      resize:vertical;
-    }
-
-    .contact-form button{
-      grid-column:span 2;
-      padding:16px;
-      border:none;
-      border-radius:14px;
-      background:linear-gradient(135deg,var(--accent2),var(--accent));
-      color:#001018;
-      font-weight:900;
-      font-size:1rem;
-      cursor:pointer;
-    }
-
-    .floating-accessibility,
-    .floating-whatsapp{
-      position:fixed;
-      width:60px;
-      height:60px;
-      border-radius:50%;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      z-index:9999;
-      cursor:pointer;
-      box-shadow:0 8px 28px rgba(0,0,0,.38);
-      border:1px solid rgba(255,255,255,.28);
-    }
-
-    .floating-accessibility{
-      left:20px;
-      bottom:20px;
-      background:linear-gradient(135deg,var(--accent2),var(--accent));
-      color:#001018;
-      font-size:28px;
-    }
-
-    .floating-whatsapp{
-      right:20px;
-      bottom:20px;
-      background:#25D366;
-      color:white;
-      font-size:28px;
-    }
-
-    .floating-whatsapp svg{
-      width:34px;
-      height:34px;
-      display:block;
-    }
-
-    .accessibility-panel{
-      position:fixed;
-      left:20px;
-      bottom:90px;
-      width:300px;
-      background:#0b1220;
-      color:#fff;
-      padding:18px;
-      border-radius:20px;
-      border:1px solid var(--line);
-      display:none;
-      z-index:9999;
-      box-shadow:0 18px 55px rgba(0,0,0,.45);
-    }
-
-    .accessibility-panel h3{margin-bottom:10px;color:var(--accent2)}
-    .accessibility-panel button{
-      width:100%;
-      margin:6px 0;
-      padding:12px;
-      border:none;
-      border-radius:12px;
-      cursor:pointer;
-      font-weight:900;
-      background:#f8fafc;
-      color:#0f172a;
-    }
-
-    footer{
-      text-align:center;
-      padding:42px 20px;
-      color:var(--muted);
-      border-top:1px solid var(--line);
-      background:rgba(0,0,0,.12);
-    }
-
-    .rtl-text{text-align:right}
-
-    @media(max-width:980px){
-      nav{display:none}
-      .contact-wrap{grid-template-columns:1fr}
-      .logo img{width:178px}
-    }
-
-    @media(max-width:700px){
-      header{padding:12px 16px}
-      .lang-toggle{padding:9px 12px}
-      .hero{min-height:72vh;padding-top:52px}
-      section{padding:62px 18px}
-      .portfolio-grid{grid-template-columns:1fr}
-      .site-preview{height:245px}
-      .contact-form{grid-template-columns:1fr}
-      .contact-form textarea,.contact-form button{grid-column:span 1}
-      .accessibility-panel{width:86%;left:7%;bottom:88px}
-      .floating-accessibility,.floating-whatsapp{width:56px;height:56px}
-    }
-  </style>
+@media(max-width:900px){
+  header{padding:12px 18px}
+  .logo img{width:190px}
+  nav{display:none}
+  .hero{grid-template-columns:1fr;text-align:center;padding:60px 22px}
+  .hero-buttons{justify-content:center}
+  .hero-visual{padding:20px}
+  form{grid-template-columns:1fr}
+  textarea,form button{grid-column:span 1}
+  .access-panel{width:86%;left:7%}
+  .site-preview iframe{transform:scale(.28)}
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <a class="logo" href="#top" aria-label="DIGITAL 247 NOW">
-    <img src="digital247logo-clear.png" alt="DIGITAL 247 NOW">
+  <a class="logo" href="#">
+    <img src="digital247dark.png" alt="DIGITAL 247 NOW">
   </a>
 
   <nav>
@@ -466,298 +251,175 @@
     <a href="#contact" data-en="Contact" data-he="צור קשר">Contact</a>
   </nav>
 
-  <button class="lang-toggle" onclick="toggleLanguage()">עברית</button>
+  <button class="lang-toggle" onclick="toggleLang()">עברית</button>
 </header>
 
-<main id="top">
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-kicker" id="heroKicker">Premium Digital Studio</div>
-      <h1>DIGITAL <span>247</span> NOW</h1>
-      <h2 id="heroSubtitle">Web Design • Organic SEO • Growth</h2>
-      <p id="heroDesc">We build premium websites, grow businesses with organic SEO, and create digital systems designed to scale.</p>
-
-      <div class="hero-buttons">
-        <a href="#portfolio" class="btn btn-primary" id="portfolioBtn">View Portfolio</a>
-        <a href="#contact" class="btn btn-secondary" id="contactBtn">Start Your Project</a>
-      </div>
+<section class="hero">
+  <div class="hero-copy">
+    <h1>DIGITAL<br>247 NOW</h1>
+    <h2 id="tagline">Web Design • Organic SEO • Growth</h2>
+    <p id="heroText">Premium websites, strong organic visibility, and digital systems built to help businesses look professional, attract leads, and grow online.</p>
+    <div class="hero-buttons">
+      <a href="#portfolio" class="btn btn-primary" id="btnWork">View Portfolio</a>
+      <a href="#contact" class="btn btn-secondary" id="btnStart">Start Your Project</a>
     </div>
-  </section>
+  </div>
 
-  <section id="services">
-    <h2 class="section-title" id="servicesTitle">Our Services</h2>
+  <div class="hero-visual">
+    <img src="digital247dark.png" alt="Digital 247 Now Logo">
+  </div>
+</section>
 
-    <div class="services-grid">
-      <div class="card">
-        <h3 id="s1">Website Development</h3>
-        <p id="s1d">Custom business websites, landing pages, and premium digital presence built for speed and trust.</p>
-      </div>
+<section id="services">
+  <h2 class="section-title" id="servicesTitle">Services</h2>
+  <div class="grid">
+    <div class="card"><h3 id="s1">Website Development</h3><p id="s1p">Custom business websites, landing pages, responsive design, speed optimization and clean user experience.</p></div>
+    <div class="card"><h3 id="s2">Organic SEO</h3><p id="s2p">Technical SEO, content structure, metadata, indexing setup and long-term search visibility.</p></div>
+    <div class="card"><h3 id="s3">Digital Growth</h3><p id="s3p">Conversion-focused strategy, lead funnels, analytics setup and business growth systems.</p></div>
+  </div>
+</section>
 
-      <div class="card">
-        <h3 id="s2">Organic SEO</h3>
-        <p id="s2d">Search visibility, ranking growth, content structure, and long-term digital authority.</p>
-      </div>
-
-      <div class="card">
-        <h3 id="s3">Digital Growth</h3>
-        <p id="s3d">Lead funnels, conversion-focused pages, and strategy that helps your business scale.</p>
-      </div>
+<section id="portfolio">
+  <h2 class="section-title" id="portfolioTitle">Featured Work</h2>
+  <div class="portfolio-grid">
+    <div class="card portfolio-card">
+      <div class="site-preview"><iframe src="https://naya-jewelry.com" loading="lazy"></iframe></div>
+      <h3>Naya Jewelry</h3><p>Luxury jewelry digital presence.</p>
+      <div class="portfolio-actions"><a href="https://naya-jewelry.com" target="_blank">Open Website</a></div>
     </div>
-  </section>
-
-  <section id="portfolio">
-    <h2 class="section-title" id="portfolioTitle">Featured Work</h2>
-
-    <div class="portfolio-grid">
-      <div class="portfolio-card">
-        <div class="site-preview">
-          <iframe src="https://naya-jewelry.com" loading="lazy" title="Naya Jewelry preview"></iframe>
-        </div>
-        <h3>Naya Jewelry</h3>
-        <p id="p1">Luxury jewelry digital presence.</p>
-        <div class="portfolio-actions">
-          <a href="https://naya-jewelry.com" target="_blank" rel="noopener" data-en="Open Website" data-he="פתח אתר">Open Website</a>
-        </div>
-      </div>
-
-      <div class="portfolio-card">
-        <div class="site-preview">
-          <iframe src="https://funnycurse.com" loading="lazy" title="Funny Curse preview"></iframe>
-        </div>
-        <h3>Funny Curse</h3>
-        <p id="p2">Interactive SEO content platform.</p>
-        <div class="portfolio-actions">
-          <a href="https://funnycurse.com" target="_blank" rel="noopener" data-en="Open Website" data-he="פתח אתר">Open Website</a>
-        </div>
-      </div>
-
-      <div class="portfolio-card">
-        <div class="site-preview">
-          <iframe src="https://electroshop-il.com" loading="lazy" title="Electroshop IL preview"></iframe>
-        </div>
-        <h3>Electroshop IL</h3>
-        <p id="p3">Professional landing page for mobile repair and accessories.</p>
-        <div class="portfolio-actions">
-          <a href="https://electroshop-il.com" target="_blank" rel="noopener" data-en="Open Website" data-he="פתח אתר">Open Website</a>
-        </div>
-      </div>
+    <div class="card portfolio-card">
+      <div class="site-preview"><iframe src="https://funnycurse.com" loading="lazy"></iframe></div>
+      <h3>Funny Curse</h3><p>Interactive SEO content platform.</p>
+      <div class="portfolio-actions"><a href="https://funnycurse.com" target="_blank">Open Website</a></div>
     </div>
-  </section>
-
-  <section id="process">
-    <h2 class="section-title" id="processTitle">How We Work</h2>
-    <div class="process-grid">
-      <div class="step"><strong id="step1">01 • Strategy</strong><p id="step1d">We understand your business, goals, audience, and offer.</p></div>
-      <div class="step"><strong id="step2">02 • Design</strong><p id="step2d">We create a clean, premium, conversion-focused structure.</p></div>
-      <div class="step"><strong id="step3">03 • Build</strong><p id="step3d">We develop a fast, responsive website that works on every device.</p></div>
-      <div class="step"><strong id="step4">04 • Grow</strong><p id="step4d">We improve SEO foundations and prepare the site for long-term growth.</p></div>
+    <div class="card portfolio-card">
+      <div class="site-preview"><iframe src="https://electroshop-il.com" loading="lazy"></iframe></div>
+      <h3>Electroshop IL</h3><p>Professional landing page for repair and retail services.</p>
+      <div class="portfolio-actions"><a href="https://electroshop-il.com" target="_blank">Open Website</a></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="contact">
-    <h2 class="section-title" id="contactTitle">Contact Us</h2>
+<section id="process">
+  <h2 class="section-title" id="processTitle">Process</h2>
+  <div class="process">
+    <div class="card step"><span>1</span><h3 id="p1">Plan</h3><p id="p1d">We understand the business, goals and target audience.</p></div>
+    <div class="card step"><span>2</span><h3 id="p2">Design</h3><p id="p2d">We create a premium visual direction and clear structure.</p></div>
+    <div class="card step"><span>3</span><h3 id="p3">Build</h3><p id="p3d">We develop a fast, responsive and professional website.</p></div>
+    <div class="card step"><span>4</span><h3 id="p4">Launch</h3><p id="p4d">We publish, connect analytics and prepare for growth.</p></div>
+  </div>
+</section>
 
-    <div class="contact-wrap">
-      <div class="contact-info">
-        <h3 id="contactInfoTitle">Ready to build something better?</h3>
-        <p id="contactInfoText">Tell us what you need and we’ll get back to you with a clear, professional direction for your project.</p>
-        <p><strong>Email:</strong><br>info@digital247now.com</p>
-      </div>
+<section id="contact">
+  <h2 class="section-title" id="contactTitle">Contact Us</h2>
+  <div class="contact-wrap">
+    <form action="https://formsubmit.co/info@digital247now.com" method="POST">
+      <input type="hidden" name="_subject" value="New Lead - DIGITAL 247 NOW">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
 
-      <div class="contact-section">
-        <form class="contact-form" action="https://formsubmit.co/info@digital247now.com" method="POST">
-          <input type="hidden" name="_subject" value="New Lead - DIGITAL247NOW">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
+      <input id="name" name="name" type="text" placeholder="Full Name" required>
+      <input id="email" name="email" type="email" placeholder="Email Address" required>
+      <input id="phone" name="phone" type="tel" placeholder="Phone Number">
+      <select id="service" name="service">
+        <option>Website Development</option>
+        <option>Organic SEO</option>
+        <option>Digital Growth</option>
+      </select>
+      <textarea id="message" name="message" placeholder="Tell us about your project"></textarea>
+      <button id="sendBtn" type="submit">Send Inquiry</button>
+    </form>
+  </div>
+</section>
 
-          <input type="text" name="name" id="name" placeholder="Full Name" required>
-          <input type="email" name="email" id="email" placeholder="Email Address" required>
-          <input type="tel" name="phone" id="phone" placeholder="Phone Number">
+<a class="float-whatsapp" href="https://wa.me/972XXXXXXXXX" target="_blank" aria-label="WhatsApp">💬</a>
 
-          <select name="service" id="service">
-            <option value="Website Development">Website Development</option>
-            <option value="Organic SEO">Organic SEO</option>
-            <option value="Digital Growth">Digital Growth</option>
-            <option value="Other">Other</option>
-          </select>
-
-          <textarea name="message" id="message" placeholder="Tell us about your project"></textarea>
-          <button type="submit" id="sendBtn">Send Inquiry</button>
-        </form>
-      </div>
-    </div>
-  </section>
-</main>
-
-<a class="floating-whatsapp" href="https://wa.me/972XXXXXXXXX" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <svg viewBox="0 0 32 32" aria-hidden="true">
-    <path fill="currentColor" d="M16.01 3.2c-7.05 0-12.79 5.73-12.79 12.78 0 2.25.59 4.45 1.72 6.39L3.1 29.1l6.89-1.8a12.72 12.72 0 0 0 6.02 1.53c7.05 0 12.78-5.73 12.78-12.78S23.06 3.2 16.01 3.2Zm0 23.48c-1.92 0-3.8-.52-5.44-1.5l-.39-.23-4.09 1.07 1.09-3.98-.26-.41a10.56 10.56 0 0 1-1.55-5.55c0-5.86 4.78-10.64 10.65-10.64s10.64 4.78 10.64 10.64-4.77 10.6-10.65 10.6Zm5.84-7.96c-.32-.16-1.89-.93-2.18-1.04-.29-.11-.5-.16-.71.16-.21.32-.82 1.04-1.01 1.25-.18.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.58-.95-.85-1.59-1.89-1.77-2.21-.18-.32-.02-.5.14-.66.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.7-.97-2.33-.25-.61-.51-.53-.71-.54h-.61c-.21 0-.56.08-.85.4-.29.32-1.11 1.09-1.11 2.65s1.14 3.07 1.3 3.28c.16.21 2.25 3.43 5.45 4.81.76.33 1.36.53 1.82.68.77.24 1.47.21 2.02.13.62-.09 1.89-.77 2.16-1.52.27-.75.27-1.39.19-1.52-.08-.13-.29-.21-.61-.37Z"/>
-  </svg>
-</a>
-
-<button class="floating-accessibility" onclick="toggleAccessibility()" aria-label="Accessibility">♿</button>
-
-<div class="accessibility-panel" id="accessPanel">
-  <h3 id="accessTitle">Accessibility</h3>
-  <button onclick="toggleDarkMode()" id="accessDark">Dark / Light Mode</button>
-  <button onclick="document.body.classList.toggle('large-text')" id="accessLarge">Large Text</button>
-  <button onclick="document.body.classList.toggle('readable-font')" id="accessFont">Readable Font</button>
-  <button onclick="toggleBold()" id="accessBold">Bold Text</button>
-  <button onclick="document.body.classList.toggle('high-contrast')" id="accessContrast">High Contrast</button>
-  <button onclick="document.body.classList.toggle('highlight-links')" id="accessLinks">Highlight Links</button>
-  <button onclick="resetAccessibility()" id="accessReset">Reset</button>
+<div class="float-access" onclick="toggleAccess()" aria-label="Accessibility">♿</div>
+<div class="access-panel" id="accessPanel">
+  <button onclick="document.body.classList.toggle('large-text')" id="acc1">Large Text</button>
+  <button onclick="document.body.classList.toggle('readable-font')" id="acc2">Readable Font</button>
+  <button onclick="toggleBold()" id="acc3">Bold Text</button>
+  <button onclick="document.body.classList.toggle('high-contrast')" id="acc4">High Contrast</button>
+  <button onclick="document.body.classList.toggle('highlight-links')" id="acc5">Highlight Links</button>
+  <button onclick="resetAccess()" id="acc6">Reset</button>
 </div>
 
-<footer>
-  © DIGITAL 247 NOW 2026
-</footer>
+<footer>© DIGITAL 247 NOW 2026</footer>
 
 <script>
-let isHebrew=false;
+let he=false;
 
-const translations = {
-  he:{
-    heroKicker:"סטודיו דיגיטל פרימיום",
-    heroSubtitle:"בניית אתרים • קידום אורגני • צמיחה",
-    heroDesc:"אנחנו בונים אתרים מקצועיים, מקדמים עסקים אורגנית ויוצרים מערכות דיגיטליות לצמיחה אמיתית.",
-    portfolioBtn:"צפה בתיק עבודות",
-    contactBtn:"התחל פרויקט",
-    servicesTitle:"השירותים שלנו",
-    s1:"בניית אתרים",
-    s1d:"אתרי תדמית, דפי נחיתה ונוכחות דיגיטלית מקצועית שבנויה למהירות ואמון.",
-    s2:"קידום אורגני",
-    s2d:"שיפור נראות בגוגל, מבנה תוכן נכון, בסיס SEO וצמיחה לטווח ארוך.",
-    s3:"צמיחה דיגיטלית",
-    s3d:"משפכי לידים, עמודים שמניעים לפעולה ואסטרטגיה שעוזרת לעסק לגדול.",
-    portfolioTitle:"פרויקטים נבחרים",
-    p1:"נוכחות דיגיטלית יוקרתית למותג תכשיטים.",
-    p2:"פלטפורמת תוכן אינטראקטיבית עם חשיבה SEO.",
-    p3:"דף נחיתה מקצועי למעבדת סלולר ואביזרים.",
-    processTitle:"איך אנחנו עובדים",
-    step1:"01 • אסטרטגיה",
-    step1d:"מבינים את העסק, המטרות, הקהל וההצעה שלך.",
-    step2:"02 • עיצוב",
-    step2d:"יוצרים מבנה נקי, יוקרתי וממוקד המרות.",
-    step3:"03 • פיתוח",
-    step3d:"בונים אתר מהיר ורספונסיבי שעובד בכל מכשיר.",
-    step4:"04 • צמיחה",
-    step4d:"מחזקים בסיס SEO ומכינים את האתר לצמיחה לטווח ארוך.",
-    contactTitle:"צור קשר",
-    contactInfoTitle:"מוכן לבנות משהו טוב יותר?",
-    contactInfoText:"ספר לנו מה אתה צריך ונחזור אליך עם כיוון ברור ומקצועי לפרויקט.",
-    name:"שם מלא",
-    email:"כתובת אימייל",
-    phone:"טלפון",
-    message:"ספר לנו על הפרויקט שלך",
-    sendBtn:"שלח פנייה",
-    accessTitle:"נגישות",
-    accessDark:"מצב כהה / בהיר",
-    accessLarge:"הגדלת טקסט",
-    accessFont:"פונט קריא",
-    accessBold:"טקסט מודגש",
-    accessContrast:"ניגודיות גבוהה",
-    accessLinks:"הדגשת קישורים",
-    accessReset:"איפוס"
-  },
-  en:{
-    heroKicker:"Premium Digital Studio",
-    heroSubtitle:"Web Design • Organic SEO • Growth",
-    heroDesc:"We build premium websites, grow businesses with organic SEO, and create digital systems designed to scale.",
-    portfolioBtn:"View Portfolio",
-    contactBtn:"Start Your Project",
-    servicesTitle:"Our Services",
-    s1:"Website Development",
-    s1d:"Custom business websites, landing pages, and premium digital presence built for speed and trust.",
-    s2:"Organic SEO",
-    s2d:"Search visibility, ranking growth, content structure, and long-term digital authority.",
-    s3:"Digital Growth",
-    s3d:"Lead funnels, conversion-focused pages, and strategy that helps your business scale.",
-    portfolioTitle:"Featured Work",
-    p1:"Luxury jewelry digital presence.",
-    p2:"Interactive SEO content platform.",
-    p3:"Professional landing page for mobile repair and accessories.",
-    processTitle:"How We Work",
-    step1:"01 • Strategy",
-    step1d:"We understand your business, goals, audience, and offer.",
-    step2:"02 • Design",
-    step2d:"We create a clean, premium, conversion-focused structure.",
-    step3:"03 • Build",
-    step3d:"We develop a fast, responsive website that works on every device.",
-    step4:"04 • Grow",
-    step4d:"We improve SEO foundations and prepare the site for long-term growth.",
-    contactTitle:"Contact Us",
-    contactInfoTitle:"Ready to build something better?",
-    contactInfoText:"Tell us what you need and we’ll get back to you with a clear, professional direction for your project.",
-    name:"Full Name",
-    email:"Email Address",
-    phone:"Phone Number",
-    message:"Tell us about your project",
-    sendBtn:"Send Inquiry",
-    accessTitle:"Accessibility",
-    accessDark:"Dark / Light Mode",
-    accessLarge:"Large Text",
-    accessFont:"Readable Font",
-    accessBold:"Bold Text",
-    accessContrast:"High Contrast",
-    accessLinks:"Highlight Links",
-    accessReset:"Reset"
-  }
-};
-
-function applyLang(lang){
-  const t = translations[lang];
-  document.documentElement.lang = lang === "he" ? "he" : "en";
-  document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
-
-  Object.keys(t).forEach(id=>{
-    const el=document.getElementById(id);
-    if(!el) return;
-    if(["name","email","phone","message"].includes(id)){
-      el.placeholder=t[id];
-    }else{
-      el.innerText=t[id];
-    }
-  });
-
-  document.querySelectorAll("[data-en]").forEach(el=>{
-    el.innerText = lang === "he" ? el.dataset.he : el.dataset.en;
-  });
-
-  document.querySelector(".lang-toggle").innerText = lang === "he" ? "English" : "עברית";
+function toggleAccess(){
+  const p=document.getElementById('accessPanel');
+  p.style.display=p.style.display==='block'?'none':'block';
 }
-
-function toggleLanguage(){
-  isHebrew = !isHebrew;
-  applyLang(isHebrew ? "he" : "en");
-}
-
-function toggleAccessibility(){
-  const panel=document.getElementById("accessPanel");
-  panel.style.display = panel.style.display==="block" ? "none" : "block";
-}
-
-function toggleDarkMode(){
-  document.body.classList.toggle("light-mode");
-}
-
 function toggleBold(){
-  document.body.style.fontWeight = document.body.style.fontWeight === "700" ? "400" : "700";
+  document.body.style.fontWeight=document.body.style.fontWeight==='700'?'400':'700';
 }
-
-function resetAccessibility(){
-  const lang = isHebrew ? "he" : "en";
-  document.body.className="";
-  document.body.style.fontWeight="400";
-  applyLang(lang);
+function resetAccess(){
+  document.body.className='';
+  document.body.style.fontWeight='400';
 }
-
-window.addEventListener("click", function(e){
-  const panel=document.getElementById("accessPanel");
-  const button=document.querySelector(".floating-accessibility");
-  if(panel && button && !panel.contains(e.target) && !button.contains(e.target)){
-    panel.style.display="none";
-  }
+window.addEventListener('click',e=>{
+  const p=document.getElementById('accessPanel');
+  const b=document.querySelector('.float-access');
+  if(!p.contains(e.target)&&!b.contains(e.target))p.style.display='none';
 });
+
+function setText(id,en,heText){
+  document.getElementById(id).innerText=he?heText:en;
+}
+function setPlaceholder(id,en,heText){
+  document.getElementById(id).placeholder=he?heText:en;
+}
+
+function toggleLang(){
+  he=!he;
+  document.documentElement.lang=he?'he':'en';
+  document.documentElement.dir=he?'rtl':'ltr';
+  document.querySelector('.lang-toggle').innerText=he?'English':'עברית';
+
+  document.querySelectorAll('nav a').forEach(a=>a.innerText=he?a.dataset.he:a.dataset.en);
+
+  setText('tagline','Web Design • Organic SEO • Growth','בניית אתרים • קידום אורגני • צמיחה');
+  setText('heroText','Premium websites, strong organic visibility, and digital systems built to help businesses look professional, attract leads, and grow online.','אתרים מקצועיים, נראות אורגנית חזקה ומערכות דיגיטליות שנבנות כדי לעזור לעסקים להיראות מקצועיים, לקבל פניות ולצמוח אונליין.');
+  setText('btnWork','View Portfolio','צפה בתיק עבודות');
+  setText('btnStart','Start Your Project','התחל פרויקט');
+
+  setText('servicesTitle','Services','שירותים');
+  setText('portfolioTitle','Featured Work','פרויקטים נבחרים');
+  setText('processTitle','Process','תהליך עבודה');
+  setText('contactTitle','Contact Us','צור קשר');
+
+  setText('s1','Website Development','בניית אתרים');
+  setText('s1p','Custom business websites, landing pages, responsive design, speed optimization and clean user experience.','אתרים עסקיים, דפי נחיתה, התאמה למובייל, מהירות וחוויית משתמש נקייה.');
+  setText('s2','Organic SEO','קידום אורגני');
+  setText('s2p','Technical SEO, content structure, metadata, indexing setup and long-term search visibility.','SEO טכני, מבנה תוכן, מטא דאטה, אינדוקס ונראות ארוכת טווח בגוגל.');
+  setText('s3','Digital Growth','צמיחה דיגיטלית');
+  setText('s3p','Conversion-focused strategy, lead funnels, analytics setup and business growth systems.','אסטרטגיה ממוקדת פניות, משפכי לידים, אנליטיקס ומערכות צמיחה לעסק.');
+
+  setText('p1','Plan','אפיון');
+  setText('p1d','We understand the business, goals and target audience.','מבינים את העסק, המטרות וקהל היעד.');
+  setText('p2','Design','עיצוב');
+  setText('p2d','We create a premium visual direction and clear structure.','יוצרים כיוון עיצובי מקצועי ומבנה ברור.');
+  setText('p3','Build','פיתוח');
+  setText('p3d','We develop a fast, responsive and professional website.','בונים אתר מהיר, רספונסיבי ומקצועי.');
+  setText('p4','Launch','השקה');
+  setText('p4d','We publish, connect analytics and prepare for growth.','מעלים לאוויר, מחברים מדידה ומכינים לצמיחה.');
+
+  setPlaceholder('name','Full Name','שם מלא');
+  setPlaceholder('email','Email Address','אימייל');
+  setPlaceholder('phone','Phone Number','טלפון');
+  setPlaceholder('message','Tell us about your project','ספר לנו על הפרויקט שלך');
+  setText('sendBtn','Send Inquiry','שלח פנייה');
+
+  setText('acc1','Large Text','טקסט גדול');
+  setText('acc2','Readable Font','פונט קריא');
+  setText('acc3','Bold Text','טקסט מודגש');
+  setText('acc4','High Contrast','ניגודיות גבוהה');
+  setText('acc5','Highlight Links','הדגשת קישורים');
+  setText('acc6','Reset','איפוס');
+}
 </script>
 
 </body>

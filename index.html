@@ -1,37 +1,276 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital247Now</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DIGITAL 247 NOW</title>
+  <meta name="description" content="Professional web design, SEO, and digital growth solutions." />
+
   <style>
+    :root {
+      --bg:#0f172a;
+      --card:#111827;
+      --accent:#38bdf8;
+      --text:#ffffff;
+      --muted:#cbd5e1;
+    }
+
     body {
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      font-family: Arial, sans-serif;
-      color: white;
-      text-align: center;
+      margin:0;
+      font-family:Arial,sans-serif;
+      background:linear-gradient(135deg,#0f172a,#1e293b);
+      color:var(--text);
+      transition:0.3s;
     }
+
+    body.light-mode {
+      background:#f8fafc;
+      color:#111827;
+    }
+
+    body.high-contrast {
+      background:black !important;
+      color:yellow !important;
+    }
+
+    body.large-text {
+      font-size:120%;
+    }
+
+    body.readable-font {
+      font-family:Verdana,sans-serif;
+    }
+
+    body.highlight-links a {
+      background:yellow;
+      color:black !important;
+      padding:2px 4px;
+    }
+
+    header {
+      padding:20px;
+      text-align:center;
+    }
+
     h1 {
-      font-size: 4rem;
-      margin: 0;
-      letter-spacing: 3px;
+      font-size:3rem;
+      margin:0;
     }
-    p {
-      margin-top: 15px;
-      font-size: 1.2rem;
-      color: #38bdf8;
+
+    .lang-toggle {
+      position:absolute;
+      top:20px;
+      right:20px;
+      background:var(--accent);
+      border:none;
+      padding:10px 15px;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:bold;
+    }
+
+    .hero {
+      text-align:center;
+      padding:60px 20px;
+    }
+
+    .hero p {
+      color:var(--muted);
+      font-size:1.2rem;
+    }
+
+    .contact-section {
+      max-width:600px;
+      margin:40px auto;
+      background:rgba(255,255,255,0.08);
+      padding:30px;
+      border-radius:20px;
+      backdrop-filter:blur(10px);
+    }
+
+    .contact-section h2 {
+      text-align:center;
+    }
+
+    .contact-form {
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding:14px;
+      border:none;
+      border-radius:10px;
+      font-size:1rem;
+    }
+
+    .contact-form button {
+      padding:14px;
+      background:var(--accent);
+      color:black;
+      font-weight:bold;
+      border:none;
+      border-radius:10px;
+      cursor:pointer;
+    }
+
+    .floating-accessibility {
+      position:fixed;
+      bottom:20px;
+      left:20px;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      background:var(--accent);
+      color:black;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:28px;
+      cursor:pointer;
+      z-index:9999;
+      box-shadow:0 4px 15px rgba(0,0,0,0.4);
+    }
+
+    .accessibility-panel {
+      position:fixed;
+      bottom:90px;
+      left:20px;
+      width:280px;
+      background:#111827;
+      color:white;
+      border-radius:20px;
+      padding:20px;
+      display:none;
+      z-index:9999;
+    }
+
+    .accessibility-panel button {
+      width:100%;
+      margin:6px 0;
+      padding:10px;
+      border:none;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:bold;
+    }
+
+    footer {
+      text-align:center;
+      padding:30px;
+      color:var(--muted);
+    }
+
+    @media(max-width:768px){
+      h1 {font-size:2.2rem;}
+      .lang-toggle {
+        top:15px;
+        right:15px;
+        padding:8px 12px;
+      }
+      .accessibility-panel {
+        width:85%;
+        left:7.5%;
+      }
     }
   </style>
 </head>
 <body>
-  <div>
-    <h1>DIGITAL 247 NOW</h1>
-    <p>Site is Live 🚀</p>
-  </div>
+
+<button class="lang-toggle" onclick="toggleLanguage()">עברית</button>
+
+<header>
+  <h1 id="title">DIGITAL 247 NOW</h1>
+</header>
+
+<section class="hero">
+  <h2 id="subtitle">Build • Grow • Scale</h2>
+  <p id="desc">Professional websites, SEO, and digital growth solutions for your business.</p>
+</section>
+
+<section class="contact-section">
+  <h2 id="contactTitle">Contact Us</h2>
+  <form class="contact-form" action="https://formspree.io/f/yourformid" method="POST">
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
+    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit" id="sendBtn">Send Message</button>
+  </form>
+</section>
+
+<div class="floating-accessibility" onclick="toggleAccessibility()">♿</div>
+
+<div class="accessibility-panel" id="accessPanel">
+  <button onclick="toggleDarkMode()">Dark / Light Mode</button>
+  <button onclick="document.body.classList.toggle('large-text')">Large Text</button>
+  <button onclick="document.body.classList.toggle('readable-font')">Readable Font</button>
+  <button onclick="document.body.style.fontWeight = document.body.style.fontWeight==='bold'?'normal':'bold'">Bold Text</button>
+  <button onclick="document.body.classList.toggle('high-contrast')">High Contrast</button>
+  <button onclick="document.body.classList.toggle('highlight-links')">Highlight Links</button>
+  <button onclick="resetAccessibility()">Reset</button>
+</div>
+
+<footer>
+  © DIGITAL 247 NOW 2026
+</footer>
+
+<script>
+  function toggleAccessibility(){
+    const panel=document.getElementById("accessPanel");
+    panel.style.display=panel.style.display==="block"?"none":"block";
+  }
+
+  function toggleDarkMode(){
+    document.body.classList.toggle("light-mode");
+  }
+
+  function resetAccessibility(){
+    document.body.className="";
+    document.body.style.fontWeight="normal";
+  }
+
+  let isHebrew=false;
+
+  function toggleLanguage(){
+    isHebrew=!isHebrew;
+
+    if(isHebrew){
+      document.documentElement.lang="he";
+      document.documentElement.dir="rtl";
+      document.getElementById("title").innerText="דיגיטל 247 עכשיו";
+      document.getElementById("subtitle").innerText="בנה • צמח • הצליח";
+      document.getElementById("desc").innerText="בניית אתרים מקצועית, קידום אורגני ופתרונות דיגיטליים לעסק שלך.";
+      document.getElementById("contactTitle").innerText="צור קשר";
+      document.getElementById("name").placeholder="השם שלך";
+      document.getElementById("email").placeholder="האימייל שלך";
+      document.getElementById("message").placeholder="ההודעה שלך";
+      document.getElementById("sendBtn").innerText="שלח הודעה";
+      document.querySelector(".lang-toggle").innerText="English";
+    } else {
+      document.documentElement.lang="en";
+      document.documentElement.dir="ltr";
+      document.getElementById("title").innerText="DIGITAL 247 NOW";
+      document.getElementById("subtitle").innerText="Build • Grow • Scale";
+      document.getElementById("desc").innerText="Professional websites, SEO, and digital growth solutions for your business.";
+      document.getElementById("contactTitle").innerText="Contact Us";
+      document.getElementById("name").placeholder="Your Name";
+      document.getElementById("email").placeholder="Your Email";
+      document.getElementById("message").placeholder="Your Message";
+      document.getElementById("sendBtn").innerText="Send Message";
+      document.querySelector(".lang-toggle").innerText="עברית";
+    }
+  }
+
+  window.addEventListener("click", function(e){
+    const panel=document.getElementById("accessPanel");
+    const button=document.querySelector(".floating-accessibility");
+    if(!panel.contains(e.target) && !button.contains(e.target)){
+      panel.style.display="none";
+    }
+  });
+</script>
+
 </body>
 </html>

@@ -3,174 +3,341 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DIGITAL 247 NOW</title>
-  <meta name="description" content="Professional web design, SEO, and digital growth solutions." />
+
+  <title>DIGITAL 247 NOW | Web Design • Organic SEO • Growth</title>
+  <meta name="description" content="Professional websites, organic SEO, and digital growth solutions." />
+
+  <!-- Local Assets -->
+  <link rel="icon" type="image/png" href="247.png">
+  <link rel="apple-touch-icon" href="247.png">
 
   <style>
-    :root {
-      --bg:#0f172a;
-      --card:#111827;
+    :root{
+      --bg1:#0f172a;
+      --bg2:#1e293b;
+      --card:rgba(255,255,255,0.08);
       --accent:#38bdf8;
       --text:#ffffff;
       --muted:#cbd5e1;
+      --dark:#111827;
     }
 
-    body {
+    *{
       margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
       font-family:Arial,sans-serif;
-      background:linear-gradient(135deg,#0f172a,#1e293b);
+      background:linear-gradient(135deg,var(--bg1),var(--bg2));
       color:var(--text);
       transition:0.3s;
+      overflow-x:hidden;
     }
 
-    body.light-mode {
+    body.light-mode{
       background:#f8fafc;
       color:#111827;
     }
 
-    body.high-contrast {
+    body.high-contrast{
       background:black !important;
       color:yellow !important;
     }
 
-    body.large-text {
+    body.large-text{
       font-size:120%;
     }
 
-    body.readable-font {
+    body.readable-font{
       font-family:Verdana,sans-serif;
     }
 
-    body.highlight-links a {
+    body.highlight-links a{
       background:yellow;
       color:black !important;
-      padding:2px 4px;
+      padding:2px 5px;
+      border-radius:4px;
     }
 
-    header {
-      padding:20px;
-      text-align:center;
+    a{
+      text-decoration:none;
+      color:inherit;
     }
 
-    h1 {
-      font-size:3rem;
-      margin:0;
+    header{
+      position:sticky;
+      top:0;
+      z-index:999;
+      backdrop-filter:blur(14px);
+      background:rgba(15,23,42,0.75);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 5%;
+      border-bottom:1px solid rgba(255,255,255,0.08);
     }
 
-    .lang-toggle {
-      position:absolute;
-      top:20px;
-      right:20px;
+    .logo img{
+      width:220px;
+      max-width:65vw;
+      height:auto;
+    }
+
+    nav{
+      display:flex;
+      gap:25px;
+      align-items:center;
+    }
+
+    nav a{
+      color:white;
+      font-weight:bold;
+      font-size:0.95rem;
+    }
+
+    .lang-toggle{
       background:var(--accent);
+      color:black;
       border:none;
-      padding:10px 15px;
-      border-radius:10px;
+      padding:10px 14px;
+      border-radius:12px;
       cursor:pointer;
       font-weight:bold;
     }
 
-    .hero {
+    .hero{
+      min-height:90vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
       text-align:center;
-      padding:60px 20px;
+      padding:40px 20px;
     }
 
-    .hero p {
+    .hero h1{
+      font-size:4.2rem;
+      margin-bottom:15px;
+      letter-spacing:2px;
+    }
+
+    .hero h2{
+      font-size:1.5rem;
+      color:var(--accent);
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      max-width:800px;
       color:var(--muted);
-      font-size:1.2rem;
+      font-size:1.15rem;
+      line-height:1.7;
     }
 
-    .contact-section {
-      max-width:600px;
-      margin:40px auto;
-      background:rgba(255,255,255,0.08);
+    .hero-buttons{
+      margin-top:35px;
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    .btn{
+      padding:14px 24px;
+      border-radius:14px;
+      font-weight:bold;
+      display:inline-block;
+    }
+
+    .btn-primary{
+      background:var(--accent);
+      color:black;
+    }
+
+    .btn-secondary{
+      border:1px solid rgba(255,255,255,0.25);
+      color:white;
+    }
+
+    section{
+      padding:80px 5%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:2.3rem;
+      margin-bottom:45px;
+    }
+
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:24px;
       padding:30px;
-      border-radius:20px;
+      backdrop-filter:blur(10px);
+      box-shadow:0 8px 25px rgba(0,0,0,0.25);
+    }
+
+    .card h3{
+      margin-bottom:15px;
+      color:var(--accent);
+    }
+
+    .card p{
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .portfolio-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+      gap:30px;
+    }
+
+    .site-preview{
+      height:240px;
+      overflow:hidden;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,0.1);
+      margin-bottom:15px;
+      background:white;
+    }
+
+    .site-preview iframe{
+      width:1200px;
+      height:900px;
+      transform:scale(.28);
+      transform-origin:top left;
+      border:none;
+    }
+
+    .contact-section{
+      max-width:850px;
+      margin:auto;
+      background:var(--card);
+      padding:40px;
+      border-radius:28px;
       backdrop-filter:blur(10px);
     }
 
-    .contact-section h2 {
-      text-align:center;
-    }
-
-    .contact-form {
-      display:flex;
-      flex-direction:column;
-      gap:15px;
+    .contact-form{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
     }
 
     .contact-form input,
-    .contact-form textarea {
-      padding:14px;
+    .contact-form select,
+    .contact-form textarea{
+      width:100%;
+      padding:15px;
       border:none;
-      border-radius:10px;
+      border-radius:14px;
       font-size:1rem;
     }
 
-    .contact-form button {
-      padding:14px;
+    .contact-form textarea{
+      grid-column:span 2;
+      min-height:160px;
+      resize:vertical;
+    }
+
+    .contact-form button{
+      grid-column:span 2;
+      padding:16px;
+      border:none;
+      border-radius:14px;
       background:var(--accent);
       color:black;
       font-weight:bold;
-      border:none;
-      border-radius:10px;
+      font-size:1rem;
       cursor:pointer;
     }
 
-    .floating-accessibility {
+    .floating-accessibility,
+    .floating-whatsapp{
       position:fixed;
-      bottom:20px;
-      left:20px;
       width:60px;
       height:60px;
       border-radius:50%;
-      background:var(--accent);
-      color:black;
       display:flex;
-      align-items:center;
       justify-content:center;
+      align-items:center;
       font-size:28px;
-      cursor:pointer;
       z-index:9999;
-      box-shadow:0 4px 15px rgba(0,0,0,0.4);
+      cursor:pointer;
+      box-shadow:0 6px 20px rgba(0,0,0,0.35);
     }
 
-    .accessibility-panel {
-      position:fixed;
-      bottom:90px;
+    .floating-accessibility{
       left:20px;
-      width:280px;
-      background:#111827;
+      bottom:20px;
+      background:var(--accent);
+      color:black;
+    }
+
+    .floating-whatsapp{
+      right:20px;
+      bottom:20px;
+      background:#25D366;
       color:white;
-      border-radius:20px;
+    }
+
+    .accessibility-panel{
+      position:fixed;
+      left:20px;
+      bottom:90px;
+      width:290px;
+      background:#111827;
       padding:20px;
+      border-radius:20px;
       display:none;
       z-index:9999;
     }
 
-    .accessibility-panel button {
+    .accessibility-panel button{
       width:100%;
       margin:6px 0;
-      padding:10px;
+      padding:12px;
       border:none;
-      border-radius:10px;
+      border-radius:12px;
       cursor:pointer;
       font-weight:bold;
     }
 
-    footer {
+    footer{
       text-align:center;
-      padding:30px;
+      padding:40px 20px;
       color:var(--muted);
     }
 
-    @media(max-width:768px){
-      h1 {font-size:2.2rem;}
-      .lang-toggle {
-        top:15px;
-        right:15px;
-        padding:8px 12px;
+    @media(max-width:900px){
+      .hero h1{
+        font-size:2.6rem;
       }
-      .accessibility-panel {
+
+      nav{
+        display:none;
+      }
+
+      .contact-form{
+        grid-template-columns:1fr;
+      }
+
+      .contact-form textarea,
+      .contact-form button{
+        grid-column:span 1;
+      }
+
+      .accessibility-panel{
         width:85%;
         left:7.5%;
       }
@@ -179,26 +346,102 @@
 </head>
 <body>
 
-<button class="lang-toggle" onclick="toggleLanguage()">עברית</button>
-
 <header>
-  <h1 id="title">DIGITAL 247 NOW</h1>
+  <div class="logo">
+    <img src="digital247logotrans.png" alt="DIGITAL 247 NOW">
+  </div>
+
+  <nav>
+    <a href="#services" data-en="Services" data-he="שירותים">Services</a>
+    <a href="#portfolio" data-en="Portfolio" data-he="תיק עבודות">Portfolio</a>
+    <a href="#contact" data-en="Contact" data-he="צור קשר">Contact</a>
+  </nav>
+
+  <button class="lang-toggle" onclick="toggleLanguage()">עברית</button>
 </header>
 
 <section class="hero">
-  <h2 id="subtitle">Build • Grow • Scale</h2>
-  <p id="desc">Professional websites, SEO, and digital growth solutions for your business.</p>
+  <h1>DIGITAL 247 NOW</h1>
+  <h2 id="heroSubtitle">Web Design • Organic SEO • Growth</h2>
+  <p id="heroDesc">
+    We build premium websites, grow businesses with organic SEO, and create digital systems designed to scale.
+  </p>
+
+  <div class="hero-buttons">
+    <a href="#portfolio" class="btn btn-primary" id="portfolioBtn">View Portfolio</a>
+    <a href="#contact" class="btn btn-secondary" id="contactBtn">Start Your Project</a>
+  </div>
 </section>
 
-<section class="contact-section">
-  <h2 id="contactTitle">Contact Us</h2>
-  <form class="contact-form" action="https://formspree.io/f/yourformid" method="POST">
-    <input type="text" id="name" name="name" placeholder="Your Name" required>
-    <input type="email" id="email" name="email" placeholder="Your Email" required>
-    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit" id="sendBtn">Send Message</button>
-  </form>
+<section id="services">
+  <h2 class="section-title" id="servicesTitle">Our Services</h2>
+
+  <div class="services-grid">
+    <div class="card">
+      <h3 id="s1">Website Development</h3>
+      <p id="s1d">Custom business websites, landing pages, and premium digital presence.</p>
+    </div>
+
+    <div class="card">
+      <h3 id="s2">Organic SEO</h3>
+      <p id="s2d">Search visibility, ranking growth, and long-term digital authority.</p>
+    </div>
+
+    <div class="card">
+      <h3 id="s3">Growth Strategy</h3>
+      <p id="s3d">Brand systems, lead generation, and scalable digital growth.</p>
+    </div>
+  </div>
 </section>
+
+<section id="portfolio">
+  <h2 class="section-title" id="portfolioTitle">Featured Work</h2>
+
+  <div class="portfolio-grid">
+    <div class="card">
+      <div class="site-preview">
+        <iframe src="https://naya-jewelry.com" loading="lazy"></iframe>
+      </div>
+      <h3>Naya Jewelry</h3>
+      <p>Luxury jewelry digital presence.</p>
+    </div>
+
+    <div class="card">
+      <div class="site-preview">
+        <iframe src="https://funnycurse.com" loading="lazy"></iframe>
+      </div>
+      <h3>Funny Curse</h3>
+      <p>Interactive SEO content platform.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title" id="contactTitle">Contact Us</h2>
+
+  <div class="contact-section">
+    <form class="contact-form" action="https://formsubmit.co/info@digital247now.com" method="POST">
+      <input type="hidden" name="_subject" value="New Lead - DIGITAL247NOW">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <input type="text" name="name" id="name" placeholder="Full Name" required>
+      <input type="email" name="email" id="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" id="phone" placeholder="Phone Number">
+      <select name="service" id="service">
+        <option>Website Development</option>
+        <option>SEO</option>
+        <option>Digital Growth</option>
+      </select>
+
+      <textarea name="message" id="message" placeholder="Tell us about your project"></textarea>
+
+      <button type="submit" id="sendBtn">Send Inquiry</button>
+    </form>
+  </div>
+</section>
+
+<a class="floating-whatsapp" href="https://wa.me/972XXXXXXXXX" target="_blank">💬</a>
 
 <div class="floating-accessibility" onclick="toggleAccessibility()">♿</div>
 
@@ -217,59 +460,66 @@
 </footer>
 
 <script>
-  function toggleAccessibility(){
-    const panel=document.getElementById("accessPanel");
-    panel.style.display=panel.style.display==="block"?"none":"block";
+function toggleAccessibility(){
+  const panel=document.getElementById("accessPanel");
+  panel.style.display=panel.style.display==="block"?"none":"block";
+}
+
+function toggleDarkMode(){
+  document.body.classList.toggle("light-mode");
+}
+
+function resetAccessibility(){
+  document.body.className="";
+  document.body.style.fontWeight="normal";
+}
+
+let isHebrew=false;
+
+function toggleLanguage(){
+  isHebrew=!isHebrew;
+
+  if(isHebrew){
+    document.documentElement.lang="he";
+    document.documentElement.dir="rtl";
+
+    document.getElementById("heroSubtitle").innerText="בניית אתרים • קידום אורגני • צמיחה";
+    document.getElementById("heroDesc").innerText="אנחנו בונים אתרים מקצועיים, מקדמים עסקים אורגנית ויוצרים מערכות דיגיטליות לצמיחה אמיתית.";
+
+    document.getElementById("portfolioBtn").innerText="צפה בתיק עבודות";
+    document.getElementById("contactBtn").innerText="התחל פרויקט";
+
+    document.getElementById("servicesTitle").innerText="השירותים שלנו";
+    document.getElementById("portfolioTitle").innerText="פרויקטים נבחרים";
+    document.getElementById("contactTitle").innerText="צור קשר";
+
+    document.querySelector(".lang-toggle").innerText="English";
+  } else {
+    document.documentElement.lang="en";
+    document.documentElement.dir="ltr";
+
+    document.getElementById("heroSubtitle").innerText="Web Design • Organic SEO • Growth";
+    document.getElementById("heroDesc").innerText="We build premium websites, grow businesses with organic SEO, and create digital systems designed to scale.";
+
+    document.getElementById("portfolioBtn").innerText="View Portfolio";
+    document.getElementById("contactBtn").innerText="Start Your Project";
+
+    document.getElementById("servicesTitle").innerText="Our Services";
+    document.getElementById("portfolioTitle").innerText="Featured Work";
+    document.getElementById("contactTitle").innerText="Contact Us";
+
+    document.querySelector(".lang-toggle").innerText="עברית";
   }
+}
 
-  function toggleDarkMode(){
-    document.body.classList.toggle("light-mode");
+window.addEventListener("click", function(e){
+  const panel=document.getElementById("accessPanel");
+  const button=document.querySelector(".floating-accessibility");
+
+  if(!panel.contains(e.target) && !button.contains(e.target)){
+    panel.style.display="none";
   }
-
-  function resetAccessibility(){
-    document.body.className="";
-    document.body.style.fontWeight="normal";
-  }
-
-  let isHebrew=false;
-
-  function toggleLanguage(){
-    isHebrew=!isHebrew;
-
-    if(isHebrew){
-      document.documentElement.lang="he";
-      document.documentElement.dir="rtl";
-      document.getElementById("title").innerText="דיגיטל 247 עכשיו";
-      document.getElementById("subtitle").innerText="בנה • צמח • הצליח";
-      document.getElementById("desc").innerText="בניית אתרים מקצועית, קידום אורגני ופתרונות דיגיטליים לעסק שלך.";
-      document.getElementById("contactTitle").innerText="צור קשר";
-      document.getElementById("name").placeholder="השם שלך";
-      document.getElementById("email").placeholder="האימייל שלך";
-      document.getElementById("message").placeholder="ההודעה שלך";
-      document.getElementById("sendBtn").innerText="שלח הודעה";
-      document.querySelector(".lang-toggle").innerText="English";
-    } else {
-      document.documentElement.lang="en";
-      document.documentElement.dir="ltr";
-      document.getElementById("title").innerText="DIGITAL 247 NOW";
-      document.getElementById("subtitle").innerText="Build • Grow • Scale";
-      document.getElementById("desc").innerText="Professional websites, SEO, and digital growth solutions for your business.";
-      document.getElementById("contactTitle").innerText="Contact Us";
-      document.getElementById("name").placeholder="Your Name";
-      document.getElementById("email").placeholder="Your Email";
-      document.getElementById("message").placeholder="Your Message";
-      document.getElementById("sendBtn").innerText="Send Message";
-      document.querySelector(".lang-toggle").innerText="עברית";
-    }
-  }
-
-  window.addEventListener("click", function(e){
-    const panel=document.getElementById("accessPanel");
-    const button=document.querySelector(".floating-accessibility");
-    if(!panel.contains(e.target) && !button.contains(e.target)){
-      panel.style.display="none";
-    }
-  });
+});
 </script>
 
 </body>

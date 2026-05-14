@@ -52,7 +52,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 999;
-  padding: 15px 6%;
+  padding: 10px 6%;
   background: rgba(10,10,14,0.85);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
@@ -64,13 +64,20 @@ header {
 .logo img {
   width: clamp(260px, 24vw, 380px);
   height: auto;
+  display: block;
   filter: drop-shadow(0 0 18px rgba(212,175,55,0.32));
 }
 
 /* מובייל */
 @media (max-width:700px){
+  header{
+    padding: 8px 5%;
+  }
+
   .logo img{
-    width:min(82vw, 340px);
+    width:min(88vw, 360px);
+    height:auto;
+    display:block;
   }
 }
 

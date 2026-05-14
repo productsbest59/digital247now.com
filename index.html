@@ -36,16 +36,18 @@
 }
 
 * { margin:0; padding:0; box-sizing:border-box; }
-body,html { width:100%; overflow-x:hidden; }
 
-@media (max-width:700px){
-  body{
-    background:
-      linear-gradient(rgba(10,10,14,.88), rgba(10,10,14,.94)),
-      url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80") center top / cover no-repeat !important;
-    background-attachment: scroll !important;
-  }
-}eight: 1.75;
+html,
+body {
+  width:100%;
+  overflow-x:hidden;
+}
+
+body {
+  font-family: 'Heebo', sans-serif;
+  color: var(--text-main);
+  line-height: 1.75;
+  background: var(--bg);
 }
 
 /* ---------------- HEADER ---------------- */

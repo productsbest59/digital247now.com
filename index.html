@@ -552,6 +552,42 @@ footer {
   border-top: 1px solid var(--border);
 }
 
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+    padding: 14px 4%;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 180px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  nav a {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  .lang-toggle {
+    margin-top: 4px;
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+}
+
 </style>
 </head>
 

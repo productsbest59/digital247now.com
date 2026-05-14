@@ -484,7 +484,31 @@ form button {
   color: var(--text-main);
   font-weight: 700;
 }
+body.large-text { font-size: 120%; }
 
+body.high-contrast {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+body.high-contrast * {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+body.highlight-links a {
+  outline: 2px solid #f4d06f;
+  text-decoration: underline !important;
+}
+
+body.readable-font {
+  font-family: Arial, sans-serif !important;
+}
+
+body.bold-text * {
+  font-weight: 800 !important;
+}
 /* ---------------- FOOTER ---------------- */
 footer {
   padding: 40px;

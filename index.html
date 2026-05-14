@@ -135,26 +135,57 @@ nav a:hover { color: var(--gold-light); }
   text-align: center;
 }
 
-.hero-title {
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  font-weight: 900;
-  color: var(--gold-light);
-  margin-bottom: 20px;
+/* מובייל עומד בלבד */
+@media (max-width:700px) and (orientation: portrait){
+
+  body{
+    background:
+      linear-gradient(rgba(10,10,14,.90), rgba(10,10,14,.96)),
+      url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80") center top / auto 100% no-repeat !important;
+    background-attachment: scroll !important;
+  }
+
+  nav{
+    gap:18px;
+    margin-bottom:14px;
+  }
+
+  .lang-toggle{
+    margin-top:14px;
+  }
+
+  .hero-title{
+    font-size: clamp(1.55rem, 7vw, 2.35rem);
+    line-height: 1.45;
+    margin-bottom: 14px;
+  }
+
+  .hero-sub{
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 92%;
+  }
+
+  .hero-buttons{
+    margin-top: 22px;
+    gap: 12px;
+  }
+
+  .hero{
+    padding-top: 34px !important;
+    padding-bottom: 34px !important;
+    min-height: auto !important;
+  }
 }
 
-.hero-sub {
-  color: var(--text-muted);
-  font-size: 1.15rem;
-  max-width: 700px;
-  margin: auto;
-}
-
-.hero-buttons {
-  margin-top: 32px;
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
+/* מובייל לרוחב - שומר על רקע תקין */
+@media (max-width:950px) and (orientation: landscape){
+  body{
+    background:
+      linear-gradient(rgba(10,10,14,.88), rgba(10,10,14,.94)),
+      url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80") center top / cover no-repeat !important;
+    background-attachment: scroll !important;
+  }
 }
 
 .btn {

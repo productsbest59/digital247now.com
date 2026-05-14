@@ -366,31 +366,53 @@ section { padding: 90px 6%; }
 }
 
 /* ---------------- FAQ ---------------- */
-.faq-grid {
+.faq-clean {
+  max-width: 850px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 26px;
+  gap: 16px;
 }
-.faq-answer {
-  background: var(--bg-glass);
+
+.faq-clean details {
+  background: rgba(255,255,255,0.055);
   border: 1px solid var(--border);
-  border-radius: 22px;
-  padding: 26px;
+  border-radius: 20px;
+  padding: 0;
+  overflow: hidden;
   box-shadow: var(--shadow-soft);
 }
-.faq-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.faq-item {
-  background: var(--bg-glass2);
-  border: 1px solid var(--border);
-  padding: 14px;
-  border-radius: 18px;
-  font-weight: 800;
+
+.faq-clean summary {
   cursor: pointer;
-  text-align: center;
+  padding: 20px 24px;
+  font-weight: 900;
+  color: var(--gold-light);
+  list-style: none;
+}
+
+.faq-clean summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-clean summary::after {
+  content: "+";
+  float: left;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+html[dir="ltr"] .faq-clean summary::after {
+  float: right;
+}
+
+.faq-clean details[open] summary::after {
+  content: "−";
+}
+
+.faq-clean p {
+  padding: 0 24px 22px;
+  color: var(--text-muted);
+  line-height: 1.8;
 }
 
 /* ---------------- CONTACT ---------------- */

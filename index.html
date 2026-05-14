@@ -947,7 +947,16 @@ function toggleAccess() {
 }
 
 function resetAccess() {
-  document.body.classList.remove("large-text", "high-contrast");
+  document.body.classList.remove(
+    "large-text",
+    "high-contrast",
+    "highlight-links",
+    "readable-font",
+    "bold-text"
+  );
+
+  const panel = document.getElementById("accessPanel");
+  if (panel) panel.style.display = "none";
 }
 
 /* סגירה אוטומטית בלחיצה בחוץ */

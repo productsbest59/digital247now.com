@@ -1155,15 +1155,26 @@ document.addEventListener("DOMContentLoaded", () => {
       el.innerHTML = el.getAttribute("data-he");
     });
   }
+
+  swapHeroImage();
 });
-  function swapHeroImage() {
+
+function swapHeroImage() {
   const hero = document.getElementById("heroImage");
   if (!hero) return;
 
-  hero.src =
-    document.documentElement.lang === "he"
+  const isMobile = window.innerWidth <= 768;
+  const isHebrew = document.documentElement.lang === "he";
+
+  if (isMobile) {
+    hero.src = isHebrew
+      ? "heromobileheb.png"
+      : "heromobileeng.png";
+  } else {
+    hero.src = isHebrew
       ? "hero-premium.png"
       : "hero-premium-en.png";
+  }
 }
 </script>
 

@@ -242,12 +242,19 @@ nav a:hover {
 
 @media (max-width:768px){
 
-  .hero-image-frame,
-  .hero-clickable,
-  #heroImage,
-  .hero-hotspot{
-    display:none !important;
-  }
+  .hero .hero-image-frame,
+.hero .hero-clickable,
+.hero #heroImage,
+.hero .hero-hotspot,
+.hero-image-frame,
+.hero-clickable{
+  display:none !important;
+  visibility:hidden !important;
+  height:0 !important;
+  overflow:hidden !important;
+  margin:0 !important;
+  padding:0 !important;
+}
 
   .mobile-hero-img{
     width:100% !important;

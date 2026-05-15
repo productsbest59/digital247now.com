@@ -1148,6 +1148,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+  function swapHeroImage() {
+  const hero = document.getElementById("heroImage");
+  if (!hero) return;
+
+  hero.src =
+    document.documentElement.lang === "he"
+      ? "hero-premium.png"
+      : "hero-premium-en.png";
+}
 </script>
 
 </body>

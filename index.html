@@ -205,6 +205,7 @@ nav a:hover {
   border-radius: 18px;
   display: block;
 }
+
 .hero-clickable{
   position:relative;
 }
@@ -231,41 +232,47 @@ nav a:hover {
   right:27%;
   width:21%;
 }
-.mobile-hero-img{
+
+/* Mobile replacement hero */
+.mobile-hero-img,
+.mobile-he,
+.mobile-en{
   display:none;
 }
 
 @media (max-width:768px){
 
   .hero-image-frame,
-.hero-clickable{
-  display:none !important;
-}
+  .hero-clickable,
+  #heroImage,
+  .hero-hotspot{
+    display:none !important;
+  }
 
   .mobile-hero-img{
-    display:block;
-    width:100%;
-    height:auto;
-    margin:28px auto 0;
+    width:100% !important;
+    max-width:100% !important;
+    height:auto !important;
+    margin:20px auto 0 !important;
     border:none !important;
     box-shadow:none !important;
     border-radius:0 !important;
-  }
-
-  html[lang="he"] .mobile-en{
-    display:none !important;
   }
 
   html[lang="he"] .mobile-he{
     display:block !important;
   }
 
-  html[lang="en"] .mobile-he{
+  html[lang="he"] .mobile-en{
     display:none !important;
   }
 
   html[lang="en"] .mobile-en{
     display:block !important;
+  }
+
+  html[lang="en"] .mobile-he{
+    display:none !important;
   }
 
 }

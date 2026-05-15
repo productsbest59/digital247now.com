@@ -1139,27 +1139,7 @@ document.addEventListener("click", e => {
     panel.style.display = "none";
   }
 });
-function toggleLang() {
-  const currentLang = document.documentElement.lang === "en" ? "en" : "he";
-  const newLang = currentLang === "he" ? "en" : "he";
 
-  document.documentElement.lang = newLang;
-  document.documentElement.dir = newLang === "he" ? "rtl" : "ltr";
-
-  document.querySelectorAll("[data-he]").forEach(el => {
-    el.innerHTML = el.getAttribute("data-" + newLang);
-  });
-
-  document.querySelector(".lang-toggle").innerText =
-    newLang === "he" ? "English" : "עברית";
-
-  const hero = document.getElementById("heroImage");
-  if (hero) {
-    hero.src = newLang === "he"
-      ? "hero-premium.png"
-      : "hero-premium-en.png";
-  }
-}
 /* טעינת עברית כברירת מחדל */
 document.addEventListener("DOMContentLoaded", () => {
   if (document.documentElement.lang === "he") {

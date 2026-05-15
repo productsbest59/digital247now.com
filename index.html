@@ -73,12 +73,24 @@ nav {
 
 nav a {
   color: var(--text-main);
-  font-weight: 700;
+  font-weight: 800;
   font-size: 0.95rem;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.055);
+  border: 1px solid rgba(212,175,55,0.22);
+  box-shadow: 0 0 14px rgba(0,0,0,.22);
   transition: 0.25s;
+  text-decoration: none;
 }
-nav a:hover { color: var(--gold-light); }
 
+nav a:hover {
+  color: #111;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+  border-color: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 0 22px rgba(244,208,111,.28);
+}
 /* Lang toggle */
 .lang-toggle {
   background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));

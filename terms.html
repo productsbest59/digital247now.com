@@ -811,45 +811,32 @@ footer {
 
   </div>
 </section>
+  <section id="legal">
+  <h2 class="section-title" data-he="תקנון האתר" data-en="Terms & Conditions"></h2>
 
+  <div class="contact-wrap" style="max-width:900px; text-align:right; line-height:2;">
 
+    <p data-he="השימוש באתר DIGITAL 247 NOW כפוף לתנאים המפורטים להלן. שימוש באתר מהווה הסכמה מלאה לתקנון זה."
+       data-en="Use of DIGITAL 247 NOW is subject to the following terms. By using this website, you fully agree to these terms."></p>
+
+    <h3 data-he="שימוש באתר" data-en="Website Usage"></h3>
+    <p data-he="האתר נועד לספק מידע אודות שירותי בניית אתרים, SEO, UX/UI ושירותים דיגיטליים נוספים. אין לעשות שימוש בלתי חוקי באתר."
+       data-en="This website provides information about website development, SEO, UX/UI and digital services. Illegal use is prohibited."></p>
+
+    <h3 data-he="קניין רוחני" data-en="Intellectual Property"></h3>
+    <p data-he="כל התכנים, העיצובים, הטקסטים והמיתוג באתר שייכים לבעלי האתר ואין להעתיק, לשכפל או לעשות בהם שימוש ללא אישור."
+       data-en="All content, designs, text and branding belong to the website owners and may not be copied or reused without permission."></p>
+
+    <h3 data-he="אחריות" data-en="Liability"></h3>
+    <p data-he="המידע באתר מוצג כפי שהוא. בעלי האתר אינם אחראים לנזק ישיר או עקיף שעלול להיגרם משימוש באתר."
+       data-en="All website information is provided as-is. The owners are not liable for any direct or indirect damages from website use."></p>
+
+    <h3 data-he="שינויים" data-en="Changes"></h3>
+    <p data-he="בעלי האתר רשאים לעדכן תקנון זה בכל עת ללא הודעה מוקדמת."
+       data-en="The website owners may update these terms at any time without prior notice."></p>
+
+  </div>
 </section>
-
-<script>
-document.getElementById("contactForm").addEventListener("submit", async function(e) {
-  e.preventDefault();
-
-  const form = this;
-  const data = new FormData(form);
-  const msg = document.getElementById("formMessage");
-
-  msg.style.display = "none";
-
-  try {
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: data,
-      headers: {
-        "Accept": "application/json"
-      }
-    });
-
-    if (response.ok) {
-      msg.innerText = "הפנייה נשלחה בהצלחה";
-      msg.style.display = "block";
-      form.reset();
-    } else {
-      msg.innerText = "אירעה שגיאה. נסה שוב.";
-      msg.style.display = "block";
-    }
-
-  } catch (error) {
-    msg.innerText = "אירעה שגיאה. נסה שוב.";
-    msg.style.display = "block";
-  }
-});
-</script>
-
 <!-- WHATSAPP -->
 <a class="float-whatsapp" href="https://wa.me/972552828338" target="_blank">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />

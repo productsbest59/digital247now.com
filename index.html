@@ -221,32 +221,6 @@ nav a:hover {
   display: block;
 }
 
-.hero-clickable{
-  position:relative;
-}
-
-.hero-clickable img{
-  display:block;
-}
-
-.hero-hotspot{
-  position:absolute;
-  bottom:7%;
-  height:10%;
-  z-index:20;
-  border-radius:999px;
-  display:block;
-}
-
-.hero-projects{
-  left:27%;
-  width:21%;
-}
-
-.hero-contact{
-  right:27%;
-  width:21%;
-}
 
 /* Mobile replacement hero */
 .mobile-hero-img,
@@ -258,18 +232,15 @@ nav a:hover {
 @media (max-width:768px){
 
   .hero .hero-image-frame,
-.hero .hero-clickable,
-.hero #heroImage,
-.hero .hero-hotspot,
-.hero-image-frame,
-.hero-clickable{
-  display:none !important;
-  visibility:hidden !important;
-  height:0 !important;
-  overflow:hidden !important;
-  margin:0 !important;
-  padding:0 !important;
-}
+  .hero #heroImage,
+  .hero-image-frame{
+    display:none !important;
+    visibility:hidden !important;
+    height:0 !important;
+    overflow:hidden !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
 
   .mobile-hero-img{
     width:100% !important;

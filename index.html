@@ -669,8 +669,18 @@ footer {
   border-top: 1px solid var(--border);
 }
 
-@media (max-width: 768px) {
+footer a {
+  color: var(--gold-light);
+  text-decoration: none;
+  margin: 0 6px;
+  font-weight: 700;
+}
 
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
   header {
     flex-direction: column;
     justify-content: center;

@@ -785,6 +785,50 @@ footer a:hover {
     margin:0 !important;
   }
 } 
+@media (max-width:768px){
+
+  nav{
+    display:none !important;
+  }
+
+  .menu-toggle{
+    display:inline-flex !important;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .mobile-menu{
+    display:none;
+    flex-direction:column;
+    gap:12px;
+    position:absolute;
+    top:100%;
+    left:50%;
+    transform:translateX(-50%);
+    width:min(92%,340px);
+    background:rgba(10,10,14,.96);
+    border:1px solid rgba(212,175,55,.22);
+    border-radius:18px;
+    padding:18px;
+    z-index:9999;
+  }
+
+  .mobile-menu.active{
+    display:flex;
+  }
+
+  .mobile-menu a{
+    font-family:Arial,sans-serif;
+    color:var(--text-main);
+    text-decoration:none;
+    padding:12px;
+    text-align:center;
+    border-radius:14px;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(212,175,55,.16);
+  }
+
+}  
 </style>
 </head>
 

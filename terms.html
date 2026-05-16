@@ -420,6 +420,165 @@ section { padding: 90px 6%; }
   margin-top: 12px;
 }
 
+/* ---------------- PORTFOLIO ---------------- */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(310px,1fr));
+  gap: 26px;
+}
+
+.site-preview {
+  height: 220px;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  margin-bottom: 14px;
+  direction: ltr;
+}
+
+.site-preview iframe {
+  direction: ltr;
+  width: 1200px;
+  height: 900px;
+  transform: scale(0.28);
+  transform-origin: top left;
+  border: 0;
+  display: block;
+}
+/* ---------------- PROCESS ---------------- */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 26px;
+}
+
+.step {
+  text-align: center;
+}
+.step span {
+  display: inline-flex;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--gold-light);
+  color: #111;
+  font-weight: 900;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.step h3 {
+  color: var(--gold-dark);
+}
+
+/* ---------------- TESTIMONIALS ---------------- */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 26px;
+}
+
+.testimonial-card {
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+}
+.testimonial-card .stars {
+  color: var(--gold-light);
+  margin-bottom: 10px;
+}
+
+/* ---------------- FAQ ---------------- */
+.faq-clean {
+  max-width: 850px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+.faq-clean details {
+  background: rgba(255,255,255,0.055);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.faq-clean summary {
+  cursor: pointer;
+  padding: 20px 24px;
+  font-weight: 900;
+  color: var(--gold-light);
+  list-style: none;
+}
+
+.faq-clean summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-clean summary::after {
+  content: "+";
+  float: left;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+html[dir="ltr"] .faq-clean summary::after {
+  float: right;
+}
+
+.faq-clean details[open] summary::after {
+  content: "−";
+}
+
+.faq-clean p {
+  padding: 0 24px 22px;
+  color: #d8ecff;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+/* ---------------- CONTACT ---------------- */
+.contact-wrap {
+  max-width: 700px;
+  margin: auto;
+  background: var(--bg-glass);
+  padding: 32px;
+  border-radius: 26px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+form {
+  display: grid;
+  gap: 18px;
+}
+
+input, textarea {
+  width: 100%;
+  border-radius: 16px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  background: var(--bg-glass2);
+  color: var(--text-main);
+  font-size: 1rem;
+}
+textarea { min-height: 130px; }
+
+form button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg,var(--gold-dark),var(--gold-light));
+  color: #111;
+  font-weight: 800;
+  cursor: pointer;
+}
+
 /* ---------------- FLOATING BUTTONS ---------------- */
 .float-whatsapp {
   position: fixed;
@@ -653,78 +812,7 @@ footer {
   </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section id="portfolio">
-  <h2 class="section-title" data-he="תיק עבודות" data-en="Portfolio"></h2>
 
-  <div class="portfolio-grid">
-
-    <div class="card portfolio-card">
-      <div class="site-preview">
-        <iframe src="https://naya-jewelry.com" loading="lazy"></iframe>
-      </div>
-      <h3>Naya Jewelry</h3>
-      <p data-he="נוכחות יוקרתית למותג תכשיטים." data-en="Premium presence for a jewelry brand."></p>
-      <div class="portfolio-actions">
-        <a href="https://naya-jewelry.com" target="_blank"
-           data-he="פתח אתר" data-en="Open"></a>
-      </div>
-    </div>
-
-    <div class="card portfolio-card">
-      <div class="site-preview">
-        <iframe src="https://funnycurse.com" loading="lazy"></iframe>
-      </div>
-      <h3>Funny Curse</h3>
-      <p data-he="פלטפורמת תוכן עם SEO חזק." data-en="Content platform with strong SEO."></p>
-      <div class="portfolio-actions">
-        <a href="https://funnycurse.com" target="_blank"
-           data-he="פתח אתר" data-en="Open"></a>
-      </div>
-    </div>
-
-    <div class="card portfolio-card">
-      <div class="site-preview">
-        <iframe src="https://electroshop-il.com" loading="lazy"></iframe>
-      </div>
-      <h3>Electroshop IL</h3>
-      <p data-he="דף נחיתה ממיר לעסק תיקונים."
-         data-en="High-converting landing page for repair services."></p>
-      <div class="portfolio-actions">
-        <a href="https://electroshop-il.com" target="_blank"
-           data-he="פתח אתר" data-en="Open"></a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2 class="section-title" data-he="צור קשר" data-en="Contact"></h2>
-
-  <div class="contact-wrap">
-    <form action="https://formsubmit.co/ajax/info@digital247now.com"
-          method="POST"
-          id="contactForm">
-
-      <input type="hidden" name="_subject" value="New Lead - DIGITAL 247 NOW" />
-      <input type="hidden" name="_captcha" value="false" />
-
-      <input name="name" type="text" placeholder="שם מלא" required>
-      <input name="email" type="email" placeholder="אימייל" required>
-      <input name="phone" type="tel" placeholder="טלפון">
-      <textarea name="message" placeholder="ספר לנו על העסק שלך" required></textarea>
-
-      <button type="submit" class="btn btn-primary"
-              data-he="שלח פנייה" data-en="Send">שלח פנייה</button>
-
-      <p id="formMessage" style="display:none; margin-top:14px; font-weight:800; color:#f4d06f;">
-        הפנייה נשלחה בהצלחה
-      </p>
-
-    </form>
-  </div>
 </section>
 
 <script>

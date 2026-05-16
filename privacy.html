@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <link rel="icon" type="image/png" href="newfav.png">
+  <link rel="shortcut icon" href="newfav.png">
+  <link rel="apple-touch-icon" href="newfav.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="newfav.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="newfav.png">
+  <meta name="theme-color" content="#0a0a0e">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>DIGITAL 247 NOW | נוכחות דיגיטלית מקצועית שמייצרת יתרון על פני המתחרים</title>
+  <meta name="description" content="בניית אתרים, SEO, UX/UI וצמיחה דיגיטלית. נוכחות פרימיום שמבליטה אותך מעל המתחרים." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+/* =============================
+   PREMIUM DARK-GOLD DESIGN
+   ============================= */
+
+:root {
+  --bg: #0a0a0e;
+  --bg-glass: rgba(255,255,255,0.04);
+  --bg-glass2: rgba(255,255,255,0.08);
+  --gold-dark: #d4af37;
+  --gold-light: #f4d06f;
+  --text-main: #f1f1f1;
+  --text-muted: #bfbfbf;
+  --border: rgba(212,175,55,0.25);
+  --shadow-soft: 0 15px 40px rgba(0,0,0,0.40);
+  --shadow-strong: 0 25px 80px rgba(0,0,0,0.65);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body,html { width:100%; overflow-x:hidden; }
+
+body {
+  background:
+    linear-gradient(rgba(10,10,14,.88), rgba(10,10,14,.94)),
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80") center top / cover fixed no-repeat;
+  font-family: Arial, sans-serif;
+  color: var(--text-main);
+  line-height: 1.75;
+}
+h1, h2, h3,
+.hero-title,
+.section-title,
+.package-card h3,
+.card h3,
+nav a,
+.lang-toggle,
+.package-btn,
+.btn {
+  font-family: Arial, sans-serif !important;
+}
+/* ---------------- HEADER ---------------- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 15px 6%;
+  background: rgba(10,10,14,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  width: 210px;
+  filter: drop-shadow(0 0 12px rgba(212,175,55,0.22));
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+}
+
+nav a {
+  font-family: Arial, sans-serif;
+  color: var(--text-main);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.055);
+  border: 1px solid rgba(212,175,55,0.22);
+  box-shadow: 0 0 14px rgba(0,0,0,.22);
+  transition: 0.25s;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #111;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+  border-color: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 0 22px rgba(244,208,111,.28);
+}
+
+.home-btn{
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 18px;
+  margin-inline-start:12px;
+}
+/* Lang toggle */
+.lang-toggle {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+  color: #111;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(244,208,111,0.25);
+  transition: 0.25s;
+}
+.lang-toggle:hover {
+  transform: translateY(-2px);
+}
+
+/* ---------------- HERO ---------------- */
+
+.hero {
+  min-height: 88vh;
+  padding: 70px 6% 60px;
+  background:
+    linear-gradient(rgba(10,10,14,.72), rgba(10,10,14,.82)),
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-inner {
+  max-width: 1000px;
+  width: 100%;
+  padding: 34px 28px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-strong);
+  border-radius: 32px;
+  text-align: center;
+}
+
+.hero-title {
+  font-family: Arial, sans-serif !important;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--gold-light);
+  margin-bottom: 20px;
+  text-shadow: none;
+}
+
+.hero-sub {
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+.hero-buttons {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 26px;
+  border-radius: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+  color: #111;
+}
+.btn-secondary {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+}
+
+/* Shine */
+.btn::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  width: 30px;
+  height: 180%;
+  background: rgba(255,255,255,0.3);
+  transform: rotate(22deg);
+  left: -60px;
+  transition: 0.4s;
+}
+.btn:hover::after { left: calc(100% + 60px); }
+
+/* Hero image */
+.hero-image-frame {
+  margin: 40px auto 0;
+  width: min(92%, 1100px);
+  border-radius: 26px;
+  padding: 12px;
+  background: var(--bg-glass2);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-image-frame img {
+  width: 100%;
+  border-radius: 18px;
+  display: block;
+}
+
+.hero-clickable{
+  position:relative;
+}
+
+.hero-clickable img{
+  display:block;
+}
+
+.hero-hotspot{
+  position:absolute;
+  bottom:7%;
+  height:10%;
+  z-index:20;
+  border-radius:999px;
+  display:none !important;
+}
+
+.hero-projects{
+  left:27%;
+  width:21%;
+}
+
+.hero-contact{
+  right:27%;
+  width:21%;
+}
+
+/* Mobile replacement hero */
+.mobile-hero-img,
+.mobile-he,
+.mobile-en{
+  display:none;
+}
+
+@media (max-width:768px){
+
+  .hero .hero-image-frame,
+.hero .hero-clickable,
+.hero #heroImage,
+.hero .hero-hotspot,
+.hero-image-frame,
+.hero-clickable{
+  display:none !important;
+  visibility:hidden !important;
+  height:0 !important;
+  overflow:hidden !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+
+  .mobile-hero-img{
+    width:100% !important;
+    max-width:100% !important;
+    height:auto !important;
+    margin:20px auto 0 !important;
+    border:none !important;
+    box-shadow:none !important;
+    border-radius:0 !important;
+  }
+
+  html[lang="he"] .mobile-he{
+    display:block !important;
+  }
+
+  html[lang="he"] .mobile-en{
+    display:none !important;
+  }
+
+  html[lang="en"] .mobile-en{
+    display:block !important;
+  }
+
+  html[lang="en"] .mobile-he{
+    display:none !important;
+  }
+
+}
+/* Trust badges */
+.trust-badges {
+  display: flex;
+  justify-content: center;
+  margin-top: 26px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.trust-badges span {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--bg-glass2);
+  border: 1px solid var(--border);
+  color: var(--gold-light);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* ---------------- SECTIONS ---------------- */
+section { padding: 90px 6%; }
+.section-title {
+  font-family: Arial, sans-serif !important;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--gold-light);
+  margin-bottom: 42px;
+  text-shadow: none;
+}
+
+/* ---------------- SERVICES ---------------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 26px;
+}
+
+.card {
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 26px;
+  box-shadow: var(--shadow-soft);
+  transition: 0.25s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-strong);
+}
+.card h3 {
+  font-size: 1.3rem;
+  color: var(--gold-dark);
+  margin-bottom: 12px;
+}
+.card p {
+  color: var(--text-muted);
+}
+
+/* ---------------- PACKAGES ---------------- */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
+  gap: 26px;
+}
+
+.package-card {
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  padding: 30px;
+  box-shadow: var(--shadow-soft);
+  transition: 0.25s;
+}
+.package-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold-light);
+}
+
+.package-card h3 {
+  color: var(--text-main);
+  margin-bottom: 8px;
+  font-size: 1.6rem;
+}
+.package-card p {
+  color: var(--text-muted);
+}
+.package-card ul {
+  list-style: none;
+  margin: 18px 0;
+  padding: 0;
+}
+.package-card li {
+  margin-bottom: 6px;
+  color: var(--text-main);
+}
+.package-card li::before {
+  content: "✓ ";
+  color: var(--gold-light);
+  font-weight: 900;
+}
+
+.package-btn {
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-weight: 800;
+  background: linear-gradient(135deg,var(--gold-dark),var(--gold-light));
+  color: #111;
+  display: inline-block;
+  margin-top: 12px;
+}
+
+/* ---------------- PORTFOLIO ---------------- */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(310px,1fr));
+  gap: 26px;
+}
+
+.site-preview {
+  height: 220px;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  margin-bottom: 14px;
+  direction: ltr;
+}
+
+.site-preview iframe {
+  direction: ltr;
+  width: 1200px;
+  height: 900px;
+  transform: scale(0.28);
+  transform-origin: top left;
+  border: 0;
+  display: block;
+}
+/* ---------------- PROCESS ---------------- */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 26px;
+}
+
+.step {
+  text-align: center;
+}
+.step span {
+  display: inline-flex;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--gold-light);
+  color: #111;
+  font-weight: 900;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.step h3 {
+  color: var(--gold-dark);
+}
+
+/* ---------------- TESTIMONIALS ---------------- */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 26px;
+}
+
+.testimonial-card {
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+}
+.testimonial-card .stars {
+  color: var(--gold-light);
+  margin-bottom: 10px;
+}
+
+/* ---------------- FAQ ---------------- */
+.faq-clean {
+  max-width: 850px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+.faq-clean details {
+  background: rgba(255,255,255,0.055);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.faq-clean summary {
+  cursor: pointer;
+  padding: 20px 24px;
+  font-weight: 900;
+  color: var(--gold-light);
+  list-style: none;
+}
+
+.faq-clean summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-clean summary::after {
+  content: "+";
+  float: left;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+html[dir="ltr"] .faq-clean summary::after {
+  float: right;
+}
+
+.faq-clean details[open] summary::after {
+  content: "−";
+}
+
+.faq-clean p {
+  padding: 0 24px 22px;
+  color: #d8ecff;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+/* ---------------- CONTACT ---------------- */
+.contact-wrap {
+  max-width: 700px;
+  margin: auto;
+  background: var(--bg-glass);
+  padding: 32px;
+  border-radius: 26px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+form {
+  display: grid;
+  gap: 18px;
+}
+
+input, textarea {
+  width: 100%;
+  border-radius: 16px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  background: var(--bg-glass2);
+  color: var(--text-main);
+  font-size: 1rem;
+}
+textarea { min-height: 130px; }
+
+form button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg,var(--gold-dark),var(--gold-light));
+  color: #111;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* ---------------- FLOATING BUTTONS ---------------- */
+.float-whatsapp {
+  position: fixed;
+  right: 0;
+  bottom: 22px;
+  width: 46px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 14px 0 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  box-shadow: 0 0 18px rgba(37,211,102,.35);
+}
+
+.float-whatsapp img {
+  width: 28px;
+  height: 28px;
+}
+
+.float-access {
+  position: fixed;
+  left: 0;
+  bottom: 22px;
+  top: auto;
+  transform: none;
+  width: 46px;
+  height: 60px;
+  background: #1e90ff;
+  border-radius: 0 14px 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 26px;
+  font-weight: 900;
+  color: #fff;
+  z-index: 999;
+  box-shadow: 0 0 18px rgba(30,144,255,.45);
+}
+
+.access-panel {
+  position: fixed;
+  bottom: 22px;
+  left: 54px;
+  top: auto;
+  transform: none;
+  width: 250px;
+  background: rgba(8,8,12,0.96);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+  display: none;
+  z-index: 999;
+}
+.access-panel button {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--bg-glass2);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  font-weight: 700;
+}
+body.large-text { font-size: 120%; }
+
+body.high-contrast {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+body.high-contrast * {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+body.highlight-links a {
+  outline: 2px solid #f4d06f;
+  text-decoration: underline !important;
+}
+
+body.readable-font {
+  font-family: Arial, sans-serif !important;
+}
+
+body.bold-text * {
+  font-weight: 800 !important;
+}
+/* ---------------- FOOTER ---------------- */
+footer {
+  padding: 40px;
+  text-align: center;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+}
+
+footer a {
+  color: var(--gold-light);
+  text-decoration: none;
+  margin: 0 6px;
+  font-weight: 700;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+    padding: 14px 4%;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 180px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+    nav a {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  .home-btn{
+    margin-top:8px;
+    margin-inline-start:0;
+  }
+
+  .lang-toggle {
+    margin-top: 4px;
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+
+  .hero-hotspot {
+    bottom: 5%;
+    height: 12%;
+  }
+
+  .hero-projects {
+    left: 6%;
+    width: 40%;
+  }
+
+  .hero-contact {
+    right: 6%;
+    width: 40%;
+  }
+}
+@media (max-width:768px){
+
+  .hero{
+    min-height:auto !important;
+    padding:28px 0 35px !important;
+  }
+
+  .hero-inner{
+    background:transparent !important;
+    border:none !important;
+    box-shadow:none !important;
+    border-radius:0 !important;
+    padding:0 16px !important;
+  }
+
+  .mobile-hero-img{
+    display:block !important;
+    width:100% !important;
+    margin:20px auto 0 !important;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+  <a href="index.html">
+    <img src="trans.png" alt="DIGITAL 247 NOW" />
+  </a>
+</div>
+
+  <nav>
+    <a href="#portfolio" data-he="תיק עבודות" data-en="Portfolio"></a>
+    <a href="#contact" data-he="צור קשר" data-en="Contact"></a>
+  </nav>
+<a href="index.html" class="btn btn-secondary home-btn"
+   data-he="דף הבית"
+   data-en="Home"></a>
+  <button class="lang-toggle" onclick="toggleLang(); swapHeroImage()">English</button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+
+    <h1 class="hero-title"
+        data-he="תיק עבודות נבחר"
+        data-en="Selected Portfolio">
+    </h1>
+
+    <p class="hero-sub"
+       data-he="פרויקטים נבחרים, אתרים פעילים ודוגמאות לנוכחות דיגיטלית אמיתית."
+       data-en="Selected projects, live websites and real digital presence examples.">
+    </p>
+
+    <div class="hero-image-frame hero-clickable">
+ <img id="heroImage" src="hero-premium-en.png" alt="DIGITAL 247 Portfolio" />
+
+  <a href="#contact" class="hero-hotspot hero-projects" aria-label="Request Quote"></a>
+
+<a href="#portfolio" class="hero-hotspot hero-contact" aria-label="View Projects"></a>
+</div>
+    
+<img src="newmobileheb.png" alt="Digital 247 Mobile Hebrew" class="mobile-hero-img mobile-he">
+<img src="newmobileeng.png" alt="Digital 247 Mobile English" class="mobile-hero-img mobile-en">
+    <div class="trust-badges">
+      <span data-he="מוכן לקידום" data-en="SEO Ready"></span>
+      <span data-he="מותאם למובייל" data-en="Mobile Optimized"></span>
+      <span data-he="מהיר ומאובטח" data-en="Fast & Secure"></span>
+      <span data-he="עברית + אנגלית" data-en="Hebrew + English"></span>
+    </div>
+
+  </div>
+</section>
+ <section id="legal">
+  <h2 class="section-title" data-he="מדיניות פרטיות" data-en="Privacy Policy"></h2>
+
+  <div class="contact-wrap" style="max-width:1000px; text-align:right; line-height:2.15;">
+
+    <p data-he="DIGITAL 247 NOW מכבד את פרטיות המשתמשים ורואה חשיבות רבה בשמירה על מידע אישי. מדיניות פרטיות זו נועדה להסביר כיצד מידע נאסף, נשמר, מעובד ומשמש במסגרת השימוש באתר ובשירותים המוצעים בו."
+       data-en="DIGITAL 247 NOW respects user privacy and places great importance on protecting personal information. This Privacy Policy explains how information may be collected, stored, processed and used through this website and its services."></p>
+
+    <h3 data-he="1. איסוף מידע" data-en="1. Information Collection"></h3>
+    <p data-he="בעת שימוש באתר, יצירת קשר, שליחת טופס, פנייה עסקית או שימוש בשירותים מסוימים, ייתכן וייאסף מידע כגון שם, טלפון, כתובת דוא״ל, תוכן פנייה, נתוני שימוש טכניים, סוג מכשיר, דפדפן, כתובת IP או מידע רלוונטי נוסף."
+       data-en="When using the website, submitting forms, contacting us or interacting with certain services, information such as name, phone number, email, inquiry content, technical usage data, browser type, device type or IP address may be collected."></p>
+
+    <h3 data-he="2. מטרות השימוש במידע" data-en="2. Use of Information"></h3>
+    <p data-he="המידע עשוי לשמש לצורכי יצירת קשר, מתן שירות, שיפור חוויית משתמש, שיווק, התאמת שירותים, אבטחה, ניתוח ביצועים, שיפור האתר, תקשורת עסקית או עמידה בדרישות חוקיות."
+       data-en="Collected information may be used for communication, service delivery, marketing, performance analysis, website improvement, security, personalization or legal compliance."></p>
+
+    <h3 data-he="3. טכנולוגיות מדידה וקובצי Cookies" data-en="3. Cookies & Analytics"></h3>
+    <p data-he="האתר עשוי להשתמש בקובצי Cookies, פיקסלים, כלי אנליטיקה, מערכות מדידה או טכנולוגיות דומות לצורך תפעול תקין, מדידת ביצועים, שיפור שירותים, פרסום ושיווק."
+       data-en="This website may use cookies, pixels, analytics tools or similar technologies for functionality, measurement, optimization, marketing and advertising purposes."></p>
+
+    <h3 data-he="4. מסירת מידע לצדדים שלישיים" data-en="4. Third-Party Sharing"></h3>
+    <p data-he="בעלי האתר אינם מוכרים מידע אישי לצדדים שלישיים, אך ייתכן שימוש בשירותי צד ג׳ כגון טפסים, אחסון, אנליטיקה, מערכות פרסום, שירותי ענן או ספקים טכנולוגיים, בכפוף לצורך התפעולי או העסקי."
+       data-en="Personal information is not sold to third parties, though trusted third-party providers such as hosting, analytics, advertising, cloud or communication services may process relevant data where operationally required."></p>
+
+    <h3 data-he="5. אבטחת מידע" data-en="5. Data Security"></h3>
+    <p data-he="DIGITAL 247 NOW נוקט באמצעים סבירים להגנה על מידע, אך אין אפשרות להבטיח אבטחה מוחלטת של מערכות דיגיטליות או העברת מידע ברשת."
+       data-en="Reasonable security measures are used to protect information, but no digital system or internet transmission can be guaranteed as completely secure."></p>
+
+    <h3 data-he="6. שמירת מידע" data-en="6. Data Retention"></h3>
+    <p data-he="מידע עשוי להישמר למשך הזמן הנדרש לצורכי שירות, תפעול, שיווק, שיפור עסקי, גיבוי, דרישות חוקיות או הגנה משפטית, בהתאם לצורך."
+       data-en="Information may be retained as needed for service delivery, operational use, legal compliance, backup, business improvement or legitimate business purposes."></p>
+
+    <h3 data-he="7. זכויות משתמש" data-en="7. User Rights"></h3>
+    <p data-he="משתמשים רשאים לפנות בנושא עדכון, תיקון או בירור לגבי מידע שנמסר, בכפוף למגבלות טכניות, עסקיות או חוקיות רלוונטיות."
+       data-en="Users may contact us regarding updates, corrections or inquiries related to submitted information, subject to applicable legal or operational limitations."></p>
+
+    <h3 data-he="8. קישורים ושירותים חיצוניים" data-en="8. External Links & Services"></h3>
+    <p data-he="האתר עשוי לכלול קישורים או אינטגרציות עם שירותים חיצוניים. מדיניות זו אינה חלה על אתרים או שירותים שאינם מופעלים ישירות על ידי בעלי האתר."
+       data-en="This website may include external links or integrations. This Privacy Policy does not apply to third-party websites or services not directly operated by the Website Owners."></p>
+
+    <h3 data-he="9. שינויים במדיניות" data-en="9. Policy Updates"></h3>
+    <p data-he="בעלי האתר רשאים לעדכן מדיניות פרטיות זו מעת לעת, בהתאם לשינויים טכנולוגיים, עסקיים, רגולטוריים או תפעוליים."
+       data-en="This Privacy Policy may be updated periodically due to technological, operational, business or regulatory changes."></p>
+
+    <h3 data-he="10. יצירת קשר" data-en="10. Contact"></h3>
+    <p data-he="לשאלות, בירורים או פניות בנושא פרטיות, ניתן ליצור קשר באמצעות פרטי ההתקשרות המופיעים באתר."
+       data-en="For privacy-related questions or requests, users may contact us through the communication channels listed on this website."></p>
+
+  </div>
+</section>
+
+  </div>
+</section>
+<!-- WHATSAPP -->
+<a class="float-whatsapp" href="https://wa.me/972552828338" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
+
+<!-- ACCESSIBILITY -->
+<div class="float-access access-tab" onclick="toggleAccess()">♿</div>
+
+<div class="access-panel" id="accessPanel">
+  <button onclick="document.body.classList.toggle('large-text')"
+          data-he="טקסט גדול" data-en="Large Text">טקסט גדול</button>
+
+  <button onclick="document.body.classList.toggle('high-contrast')"
+          data-he="ניגודיות גבוהה" data-en="High Contrast">ניגודיות גבוהה</button>
+
+  <button onclick="document.body.classList.toggle('highlight-links')"
+          data-he="הדגשת קישורים" data-en="Highlight Links">הדגשת קישורים</button>
+
+  <button onclick="document.body.classList.toggle('readable-font')"
+          data-he="פונט קריא" data-en="Readable Font">פונט קריא</button>
+
+  <button onclick="document.body.classList.toggle('bold-text')"
+          data-he="טקסט מודגש" data-en="Bold Text">טקסט מודגש</button>
+
+  <button onclick="resetAccess()"
+          data-he="איפוס" data-en="Reset">איפוס</button>
+</div>
+
+<footer>
+  <div style="margin-bottom:14px;">
+    <a href="terms.html">תקנון</a> |
+    <a href="privacy.html">מדיניות פרטיות</a> |
+    <a href="accessibility.html">הצהרת נגישות</a>
+  </div>
+
+  <div>
+    © DIGITAL 247 NOW - 2026
+  </div>
+</footer>
+
+<script>
+
+/* LANGUAGE */
+let lang = "he";
+
+function toggleLang() {
+  lang = (lang === "he" ? "en" : "he");
+  document.documentElement.lang = lang;
+  document.documentElement.dir = (lang === "he" ? "rtl" : "ltr");
+
+  document.querySelectorAll("[data-he]").forEach(el => {
+    el.innerHTML = el.getAttribute(`data-${lang}`);
+  });
+
+  document.querySelector(".lang-toggle").innerText =
+    (lang === "he" ? "English" : "עברית");
+}
+
+/* FAQ */
+function setFAQ(id) {
+  const data = {
+    1: {
+      heTitle: "01 / זמני בנייה",
+      enTitle: "01 / Timeline",
+      heText: "פרויקטים מהירים תלויים במוכנות חומרים. אתרים מורכבים דורשים זמן איכות.",
+      enText: "Fast builds depend on content readiness. Complex websites require more time."
+    },
+    2: {
+      heTitle: "02 / SEO",
+      enTitle: "02 / SEO",
+      heText: "כל אתר נבנה עם בסיס SEO חזק: מהירות, מבנה נכון ומטא‑דאטה.",
+      enText: "Every website includes a strong SEO foundation: speed, structure, metadata."
+    },
+    3: {
+      heTitle: "03 / מובייל",
+      enTitle: "03 / Mobile",
+      heText: "כל אתר מותאם למובייל בצורה מלאה וברורה.",
+      enText: "Fully mobile‑optimized for clarity and usability."
+    },
+    4: {
+      heTitle: "04 / שפות",
+      enTitle: "04 / Languages",
+      heText: "תמיכה מלאה בעברית ובאנגלית עם כפתור החלפת שפה.",
+      enText: "Full Hebrew + English support with a clean language toggle."
+    },
+    5: {
+         heTitle: "05 / וואטסאפ",
+      enTitle: "05 / WhatsApp",
+      heText: "ניתן להוסיף כפתור וואטסאפ צף המחובר ישירות למספר העסק.",
+      enText: "A floating WhatsApp button can be connected directly to your business number."
+    },
+    6: {
+      heTitle: "06 / מחירים",
+      enTitle: "06 / Pricing",
+      heText: "המחיר נקבע לפי מורכבות העבודה: עיצוב, פיתוח, SEO ותוכן.",
+      enText: "Pricing depends on project scope: design, development, SEO and content."
+    }
+  };
+
+  const block = data[id];
+  const titleEl = document.getElementById("faq-title");
+  const textEl = document.getElementById("faq-text");
+
+  if (titleEl && textEl) {
+    titleEl.innerHTML = (lang === "he" ? block.heTitle : block.enTitle);
+    textEl.innerHTML = (lang === "he" ? block.heText : block.enText);
+  }
+}
+
+/* ===========================
+   ACCESSIBILITY
+=========================== */
+
+function toggleAccess() {
+  const panel = document.getElementById("accessPanel");
+  panel.style.display = (panel.style.display === "block" ? "none" : "block");
+}
+
+function resetAccess() {
+  document.body.classList.remove(
+    "large-text",
+    "high-contrast",
+    "highlight-links",
+    "readable-font",
+    "bold-text"
+  );
+
+  const panel = document.getElementById("accessPanel");
+  if (panel) panel.style.display = "none";
+}
+
+/* סגירה אוטומטית בלחיצה בחוץ */
+document.addEventListener("click", e => {
+  const panel = document.getElementById("accessPanel");
+  const btn = document.querySelector(".float-access");
+
+  if (panel && btn && !panel.contains(e.target) && !btn.contains(e.target)) {
+    panel.style.display = "none";
+  }
+});
+
+/* טעינת עברית כברירת מחדל */
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.documentElement.lang === "he") {
+    document.querySelectorAll("[data-he]").forEach(el => {
+      el.innerHTML = el.getAttribute("data-he");
+    });
+  }
+
+  swapHeroImage();
+});
+
+function swapHeroImage() {
+  const hero = document.getElementById("heroImage");
+  if (!hero) return;
+
+  const isMobile = window.innerWidth <= 768;
+  const isHebrew = document.documentElement.lang === "he";
+
+  if (isMobile) {
+    hero.src = isHebrew
+      ? "heromobileheb.png"
+      : "heromobileeng.png";
+  } else {
+    hero.src = isHebrew
+      ? "hero-premium.png"
+      : "hero-premium-en.png";
+  }
+}
+</script>
+
+</body>
+</html>
+  

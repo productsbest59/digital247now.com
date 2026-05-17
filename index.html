@@ -787,14 +787,23 @@ footer a:hover {
 /* Responsive header with hamburger */
 @media (max-width:768px){
   header{
-    flex-direction:row !important;
-    justify-content:center !important;
-    align-items:center !important;
-    gap:12px !important;
-    padding:12px 4% 14px !important;
-    text-align:center !important;
-    position:sticky !important;
-  }
+  position:absolute !important;
+  top:0;
+  left:0;
+  width:100%;
+  background:transparent !important;
+  background-color:transparent !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+  border:none !important;
+  box-shadow:none !important;
+  flex-direction:row !important;
+  justify-content:center !important;
+  align-items:center !important;
+  gap:12px !important;
+  padding:14px 5% !important;
+  text-align:center !important;
+}
 
   .logo img{
     width:150px !important;

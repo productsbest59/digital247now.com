@@ -1000,10 +1000,30 @@ footer a:hover {
     left:auto !important;
   }
 
-  .hero{
-    padding-top:28px !important;
+  /* FINAL FIX - transparent header spacing */
+.hero {
+  padding-top: 130px !important;
+}
+
+@media (max-width:768px){
+  .hero {
+    padding-top: 115px !important;
   }
 }
+
+@media (max-width:950px) and (orientation:landscape){
+  .hero {
+    padding-top: 105px !important;
+  }
+}
+
+@media (min-width:769px) and (max-width:1400px){
+  .hero {
+    padding-top: 115px !important;
+  }
+}
+
+הסיבה שלא ראית שינוי: יש לך כמה @media בהמשך הקובץ שדורסים את ה־.hero הרגיל. לכן צריך לשים את זה בסוף עם !important. הקובץ שלך באמת מלא בכמה שכבות CSS כאלה.
 </style>
 </head>
 

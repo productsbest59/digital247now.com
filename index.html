@@ -826,23 +826,52 @@ footer a:hover {
   }
 
   .logo img{
-    width:135px !important;
+    width:150px !important;
   }
 
   .hamburger{
-    width:46px;
-    height:46px;
-    font-size:26px;
+    width:48px !important;
+    height:48px !important;
+    font-size:26px !important;
   }
 
   .main-nav{
-    top:58px !important;
+    top:62px !important;
   }
 
   .lang-toggle{
-    padding:7px 13px !important;
-    font-size:.82rem !important;
+    position:absolute !important;
+    top:50% !important;
+    transform:translateY(-50%) !important;
+    padding:8px 18px !important;
+    font-size:.9rem !important;
     margin:0 !important;
+  }
+
+  /* עברית */
+  html[lang="he"] .hamburger{
+    left:24px !important;
+    right:auto !important;
+  }
+
+  html[lang="he"] .lang-toggle{
+    left:96px !important;
+    right:auto !important;
+  }
+
+  /* אנגלית */
+  html[lang="en"] .hamburger{
+    right:24px !important;
+    left:auto !important;
+  }
+
+  html[lang="en"] .lang-toggle{
+    right:96px !important;
+    left:auto !important;
+  }
+
+  .hero{
+    padding-top:22px !important;
   }
 }
 @media (max-width:768px){

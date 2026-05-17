@@ -1291,6 +1291,10 @@ function toggleLang() {
 
   document.querySelector(".lang-toggle").innerText =
     (lang === "he" ? "English" : "עברית");
+
+  document.querySelectorAll("[data-placeholder-he]").forEach(el => {
+    el.placeholder = el.getAttribute(`data-placeholder-${lang}`);
+  });
 }
 
 /* FAQ */

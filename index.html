@@ -1166,10 +1166,28 @@ footer a:hover {
       <input type="hidden" name="_subject" value="New Lead - DIGITAL 247 NOW" />
       <input type="hidden" name="_captcha" value="false" />
 
-      <input name="name" type="text" placeholder="שם מלא" required>
-      <input name="email" type="email" placeholder="אימייל" required>
-      <input name="phone" type="tel" placeholder="טלפון">
-      <textarea name="message" placeholder="ספר לנו על העסק שלך" required></textarea>
+      <input name="name" type="text"
+       placeholder="שם מלא"
+       data-placeholder-he="שם מלא"
+       data-placeholder-en="Full Name"
+       required>
+
+<input name="email" type="email"
+       placeholder="אימייל"
+       data-placeholder-he="אימייל"
+       data-placeholder-en="Email"
+       required>
+
+<input name="phone" type="tel"
+       placeholder="טלפון"
+       data-placeholder-he="טלפון"
+       data-placeholder-en="Phone">
+
+<textarea name="message"
+          placeholder="ספר לנו על העסק שלך"
+          data-placeholder-he="ספר לנו על העסק שלך"
+          data-placeholder-en="Tell us about your business"
+          required></textarea>
 
       <button type="submit" class="btn btn-primary"
               data-he="שלח פנייה" data-en="Send">שלח פנייה</button>

@@ -946,6 +946,59 @@ footer a:hover {
     font-size:1.05rem !important;
   }
 }
+/* Tablet landscape fix */
+@media (min-width:951px) and (max-width:1180px) and (orientation:landscape){
+
+  header{
+    height:78px !important;
+    padding:6px 4% !important;
+    justify-content:center !important;
+    align-items:center !important;
+  }
+
+  .logo img{
+    width:175px !important;
+  }
+
+  .hamburger{
+    width:50px !important;
+    height:50px !important;
+    font-size:27px !important;
+  }
+
+  .lang-toggle{
+    position:absolute !important;
+    top:50% !important;
+    transform:translateY(-50%) !important;
+    padding:8px 17px !important;
+    font-size:.88rem !important;
+    margin:0 !important;
+  }
+
+  html[lang="he"] .hamburger{
+    left:24px !important;
+    right:auto !important;
+  }
+
+  html[lang="he"] .lang-toggle{
+    left:88px !important;
+    right:auto !important;
+  }
+
+  html[lang="en"] .hamburger{
+    right:24px !important;
+    left:auto !important;
+  }
+
+  html[lang="en"] .lang-toggle{
+    right:88px !important;
+    left:auto !important;
+  }
+
+  .hero{
+    padding-top:28px !important;
+  }
+}
 </style>
 </head>
 

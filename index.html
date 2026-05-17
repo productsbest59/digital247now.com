@@ -881,6 +881,71 @@ footer a:hover {
       url("mobile-bg.jpg") center top / cover no-repeat !important;
   }
 }
+/* Tablet fix */
+@media (min-width:769px) and (max-width:1180px){
+
+  header{
+    height:86px !important;
+    padding:8px 4% !important;
+    justify-content:center !important;
+  }
+
+  .logo img{
+    width:190px !important;
+  }
+
+  .hamburger{
+    width:52px !important;
+    height:52px !important;
+    font-size:28px !important;
+  }
+
+  .lang-toggle{
+    position:absolute !important;
+    top:50% !important;
+    transform:translateY(-50%) !important;
+    padding:9px 18px !important;
+    font-size:.9rem !important;
+    margin:0 !important;
+  }
+
+  html[lang="he"] .hamburger{
+    left:24px !important;
+    right:auto !important;
+  }
+
+  html[lang="he"] .lang-toggle{
+    left:92px !important;
+    right:auto !important;
+  }
+
+  html[lang="en"] .hamburger{
+    right:24px !important;
+    left:auto !important;
+  }
+
+  html[lang="en"] .lang-toggle{
+    right:92px !important;
+    left:auto !important;
+  }
+
+  .hero{
+    padding:40px 5% 45px !important;
+  }
+
+  .hero-inner{
+    max-width:900px !important;
+    padding:28px 22px !important;
+  }
+
+  .hero-title{
+    font-size:clamp(2rem, 4.4vw, 3rem) !important;
+  }
+
+  .hero-sub{
+    font-size:1.05rem !important;
+  }
+}
 </style>
 </head>
 

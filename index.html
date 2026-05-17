@@ -1022,8 +1022,21 @@ footer a:hover {
     padding-top: 115px !important;
   }
 }
+html, body {
+  background:
+    linear-gradient(rgba(10,10,14,.35), rgba(10,10,14,.55)),
+    url("digital-bg.jpg") center top / cover fixed no-repeat !important;
+}
 
-הסיבה שלא ראית שינוי: יש לך כמה @media בהמשך הקובץ שדורסים את ה־.hero הרגיל. לכן צריך לשים את זה בסוף עם !important. הקובץ שלך באמת מלא בכמה שכבות CSS כאלה.
+body {
+  background:
+    linear-gradient(rgba(10,10,14,.35), rgba(10,10,14,.55)),
+    url("digital-bg.jpg") center top / cover fixed no-repeat !important;
+}
+
+.hero {
+  background: transparent !important;
+}
 </style>
 </head>
 

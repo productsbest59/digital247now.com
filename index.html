@@ -626,7 +626,17 @@ input, textarea {
   color: var(--gold-light);
   font-size: 1rem;
 }
-textarea { min-height: 130px; }
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--gold-light) !important;
+  opacity: 0.95 !important;
+  font-weight: 700;
+}
+
+textarea {
+  min-height: 130px;
+}
 
 form button {
   width: 100%;

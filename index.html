@@ -76,16 +76,14 @@ nav a,
 }
 /* ---------------- HEADER ---------------- */
 header {
-  position: absolute;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
   z-index: 999;
-  padding: 10px 4%;
-  background: transparent !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  border-bottom: none !important;
+  padding: 8px 4%;
+  background: rgba(10,10,14,0.85) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -93,7 +91,7 @@ header {
 }
 
 .logo img {
-  width: 210px;
+  width: 230px;
   filter: drop-shadow(0 0 12px rgba(212,175,55,0.22));
 }
 

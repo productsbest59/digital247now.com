@@ -335,23 +335,18 @@ html[lang="en"] .lang-toggle {
   display:none;
 }
 
-/* Trust badges */
-.trust-badges {
-  display: flex;
-  justify-content: center;
-  margin-top: 24px;
-  gap: 12px;
-  flex-wrap: wrap;
+.trust-banner{
+  width:min(760px,92%);
+  display:none;
+  margin:24px auto 0;
 }
 
-.trust-badges span {
-  padding: 8px 14px;
-  border-radius: 999px;
-  background: var(--bg-glass2);
-  border: 1px solid var(--border);
-  color: var(--gold-light);
-  font-weight: 700;
-  font-size: 0.9rem;
+html[lang="he"] .trust-banner-he{
+  display:block;
+}
+
+html[lang="en"] .trust-banner-en{
+  display:block;
 }
 
 /* ---------------- SECTIONS ---------------- */

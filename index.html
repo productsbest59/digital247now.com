@@ -1070,7 +1070,23 @@ body::before{
 
 /* ---------------- TABLET ---------------- */
 @media (min-width:769px) and (max-width:1180px) and (orientation:portrait) {
+  body{
+    background:none !important;
+  }
 
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+
+    background:
+      linear-gradient(rgba(10,10,14,.46), rgba(10,10,14,.68)),
+      url("digital-bg.jpg") center center / cover no-repeat;
+
+    transform:translateZ(0);
+    -webkit-transform:translateZ(0);
+  }
   .hero{
     padding: 118px 5% 44px;
   }
@@ -1091,7 +1107,23 @@ body::before{
 
 /* ---------------- TABLET LANDSCAPE ---------------- */
 @media (min-width:951px) and (max-width:1400px) and (orientation:landscape) {
+  body{
+    background:none !important;
+  }
 
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+
+    background:
+      linear-gradient(rgba(10,10,14,.40), rgba(10,10,14,.62)),
+      url("digital-bg.jpg") center center / cover no-repeat;
+
+    transform:translateZ(0);
+    -webkit-transform:translateZ(0);
+  }
   .hero{
     padding-top:105px;
   }

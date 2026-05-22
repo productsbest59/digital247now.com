@@ -868,11 +868,23 @@ footer a:hover {
 
 /* ---------------- MOBILE PORTRAIT ---------------- */
 @media (max-width:768px) and (orientation:portrait) {
-  body {
-    background:
-      linear-gradient(rgba(10,10,14,.42), rgba(10,10,14,.62)),
-      url("digital-bg.jpg") center center / cover scroll no-repeat !important;
-  }
+  body{
+  background:none !important;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+
+  background:
+    linear-gradient(rgba(10,10,14,.42), rgba(10,10,14,.62)),
+    url("digital-bg.jpg") center center / cover no-repeat;
+
+  transform:translateZ(0);
+  -webkit-transform:translateZ(0);
+}
 
   .hero {
     padding: 112px 5% 32px;

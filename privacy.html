@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <link rel="icon" type="image/png" href="newfav.png">
+  <link rel="shortcut icon" href="newfav.png">
+  <link rel="apple-touch-icon" href="newfav.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="newfav.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="newfav.png">
+  <meta name="theme-color" content="#0a0a0e">
+  <meta charset="UTF-8" />
+  <link rel="preload" as="image" href="digital-bg.jpg">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYSB0PQRD3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YYSB0PQRD3');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>DIGITAL 247 NOW | מדיניות פרטיות</title>
+  <meta name="description" content="בניית אתרים, SEO, UX/UI וצמיחה דיגיטלית. נוכחות פרימיום שמבליטה אותך מעל המתחרים." />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* =============================
+   DIGITAL 247 NOW - CLEAN FINAL CSS
+   ============================= */
+
+:root {
+  --bg: #0a0a0e;
+  --bg-glass: rgba(255,255,255,0.04);
+  --bg-glass2: rgba(255,255,255,0.08);
+  --gold-dark: #d4af37;
+  --gold-light: #f4d06f;
+  --text-main: #f1f1f1;
+  --text-muted: #bfbfbf;
+  --border: rgba(212,175,55,0.25);
+  --shadow-soft: 0 15px 40px rgba(0,0,0,0.40);
+  --shadow-strong: 0 25px 80px rgba(0,0,0,0.65);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--text-main);
+  line-height: 1.75;
+  background:
+  linear-gradient(rgba(10,10,14,.88), rgba(10,10,14,.94)),
+  url("digital-bg.jpg") center top / cover fixed no-repeat;
+}
+
+h1, h2, h3,
+.hero-title,
+.section-title,
+.package-card h3,
+.card h3,
+nav a,
+.lang-toggle,
+.package-btn,
+.btn {
+  font-family: Arial, sans-serif !important;
+}
+
+
+
+/* ---------------- HEADER - FINAL CLEAN ---------------- */
+header.premium-site-header{
+  position:absolute;
+  top:16px;
+  left:50%;
+  right:auto;
+  transform:translateX(-50%);
+
+  width:clamp(760px, 58vw, 900px);
+  max-width:calc(100% - 96px);
+  min-height:78px;
+  padding:10px 18px;
+  z-index:9999;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:rgba(8,8,10,.74);
+  border:1px solid rgba(212,175,55,.62);
+  border-radius:24px;
+
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+
+  box-shadow:
+    0 10px 34px rgba(0,0,0,.38),
+    0 0 18px rgba(212,175,55,.10);
+}
+
+header.premium-site-header .logo{
+  position:relative;
+  z-index:10000;
+}
+
+header.premium-site-header .logo img{
+  width:auto;
+  max-width:290px;
+  height:58px;
+  max-height:58px;
+  margin-top:0;
+  display:block;
+  filter:drop-shadow(0 0 14px rgba(212,175,55,.28));
+}
+
+header.premium-site-header .hamburger{
+  position:absolute;
+  top:50%;
+  left:18px;
+  right:auto;
+  transform:translateY(-50%);
+
+  width:52px;
+  height:52px;
+
+  border-radius:16px;
+  border:1px solid rgba(212,175,55,.78);
+
+  background:#09090b;
+  color:#f4d06f;
+
+  font-size:27px;
+  font-weight:900;
+  cursor:pointer;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  z-index:10001;
+
+  box-shadow:
+    0 0 16px rgba(212,175,55,.12),
+    0 8px 22px rgba(0,0,0,.42);
+}
+
+html[lang="he"] header.premium-site-header .hamburger{
+  left:18px;
+  right:auto;
+}
+
+html[lang="en"] header.premium-site-header .hamburger{
+  right:18px;
+  left:auto;
+}
+
+header.premium-site-header .lang-toggle{
+  position:absolute;
+  top:50%;
+  right:18px;
+  left:auto;
+  transform:translateY(-50%);
+
+  min-width:88px;
+  width:auto;
+  height:42px;
+  padding:0 11px;
+
+  border-radius:14px;
+  border:1px solid rgba(212,175,55,.78);
+
+  background:#09090b;
+  color:#f4d06f;
+
+  font-family:Arial, sans-serif;
+  font-size:.78rem;
+  font-weight:800;
+  cursor:pointer;
+  white-space:nowrap;
+
+  box-shadow:
+    0 0 16px rgba(212,175,55,.12),
+    0 8px 22px rgba(0,0,0,.42);
+}
+
+html[lang="he"] header.premium-site-header .lang-toggle{
+  right:18px;
+  left:auto;
+}
+
+html[lang="en"] header.premium-site-header .lang-toggle{
+  left:18px;
+  right:auto;
+}
+
+header.premium-site-header .lang-toggle:hover,
+header.premium-site-header .hamburger:hover{
+  transform:translateY(-50%) translateY(-2px);
+}
+
+header.premium-site-header .main-nav{
+  position:absolute;
+  top:88px;
+  left:18px;
+  right:auto;
+
+  min-width:230px;
+
+  display:none;
+  flex-direction:column;
+  gap:12px;
+
+  padding:18px;
+  border-radius:22px;
+
+  background:rgba(10,10,14,0.96);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow-strong);
+
+  z-index:10000;
+}
+
+html[lang="en"] header.premium-site-header .main-nav{
+  right:18px;
+  left:auto;
+}
+
+header.premium-site-header .main-nav.open{
+  display:flex;
+}
+
+header.premium-site-header .main-nav a{
+  width:100%;
+  text-align:center;
+  font-family:Arial, sans-serif;
+  color:var(--text-main);
+  font-weight:700;
+  font-size:.95rem;
+  padding:9px 16px;
+  border-radius:999px;
+  background:rgba(255,255,255,.055);
+  border:1px solid rgba(212,175,55,.22);
+  box-shadow:0 0 14px rgba(0,0,0,.22);
+  transition:.25s;
+  text-decoration:none;
+}
+
+header.premium-site-header .main-nav a:hover{
+  color:#111;
+  background:linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+  border-color:var(--gold-light);
+  transform:translateY(-2px);
+  box-shadow:0 0 22px rgba(244,208,111,.28);
+}
+
+@media (max-width:950px){
+  header.premium-site-header{
+    top:10px;
+    width:calc(100% - 28px);
+    max-width:none;
+    min-height:70px;
+    padding:8px 12px;
+    border-radius:18px;
+  }
+
+  header.premium-site-header .logo img{
+    width:190px;
+    max-width:35vw;
+  }
+
+  header.premium-site-header .hamburger{
+    width:46px;
+    height:46px;
+    border-radius:14px;
+    font-size:25px;
+  }
+
+  header.premium-site-header .lang-toggle{
+    min-width:82px;
+    height:42px;
+    padding:0 10px;
+    border-radius:13px;
+    font-size:.78rem;
+  }
+
+  html[lang="he"] header.premium-site-header .hamburger{left:12px; right:auto;}
+  html[lang="he"] header.premium-site-header .lang-toggle{right:12px; left:auto;}
+
+  html[lang="en"] header.premium-site-header .hamburger{right:12px; left:auto;}
+  html[lang="en"] header.premium-site-header .lang-toggle{left:12px; right:auto;}
+
+  header.premium-site-header .main-nav{top:78px;}
+}
+
+@media (max-width:768px){
+  header.premium-site-header{
+    top:10px;
+    width:calc(100% - 14px);
+    max-width:none;
+    min-height:72px;
+    padding:8px 10px;
+    border-radius:18px;
+  }
+
+  header.premium-site-header .logo img{
+    width:160px;
+    max-width:42vw;
+  }
+
+  header.premium-site-header .hamburger{
+    width:46px;
+    height:46px;
+    border-radius:14px;
+    font-size:25px;
+  }
+
+  header.premium-site-header .lang-toggle{
+    min-width:78px;
+    height:42px;
+    padding:0 10px;
+    border-radius:13px;
+    font-size:.76rem;
+  }
+
+  html[lang="he"] header.premium-site-header .hamburger{left:10px; right:auto;}
+  html[lang="he"] header.premium-site-header .lang-toggle{right:10px; left:auto;}
+
+  html[lang="en"] header.premium-site-header .hamburger{right:10px; left:auto;}
+  html[lang="en"] header.premium-site-header .lang-toggle{left:10px; right:auto;}
+
+  header.premium-site-header .main-nav{
+    top:78px;
+    left:10px;
+  }
+
+  html[lang="en"] header.premium-site-header .main-nav{
+    right:10px;
+    left:auto;
+  }
+}
+
+/* ---------------- HERO ---------------- */
+
+.hero {
+  min-height: 88vh;
+  padding: 130px 6% 55px;
+  background: transparent !important;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-inner {
+  max-width: 1000px;
+  width: 100%;
+  padding: 30px 26px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-strong);
+  border-radius: 32px;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--gold-light);
+  margin-bottom: 18px;
+  text-shadow: none;
+}
+
+.hero-sub {
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+.hero-buttons {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-real-buttons{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:20px;
+}
+
+.hero-real-buttons a{
+  text-decoration:none;
+}
+
+.btn {
+  padding: 14px 26px;
+  border-radius: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover { transform: translateY(-2px); }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+  color: #111;
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+}
+
+/* Shine */
+.btn::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  width: 30px;
+  height: 180%;
+  background: rgba(255,255,255,0.3);
+  transform: rotate(22deg);
+  left: -60px;
+  transition: 0.4s;
+}
+
+.btn:hover::after { left: calc(100% + 60px); }
+
+/* Hero image */
+.hero-image-frame {
+  margin: 22px auto 0;
+  width: min(52%, 560px);
+  border-radius: 22px;
+  padding: 8px;
+  background: var(--bg-glass2);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-image-frame img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+}
+
+/* Mobile replacement hero */
+.mobile-hero-img,
+.mobile-he,
+.mobile-en{
+  display:none;
+}
+
+.trust-banner{
+  width:min(620px,95%);
+  margin:8px auto -20px;
+  display:none;
+}
+
+html[lang="he"] .trust-banner-he{
+  display:block;
+}
+
+html[lang="en"] .trust-banner-en{
+  display:block;
+}
+
+/* ---------------- SECTIONS ---------------- */
+section {
+  padding: 56px 6%;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--gold-light);
+  margin-bottom: 30px;
+  text-shadow: none;
+}
+
+/* ---------------- CARDS / SERVICES ---------------- */
+.services-grid,
+.packages-grid,
+.process-grid,
+.testimonials-grid,
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 24px;
+}
+
+.packages-grid {
+  grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
+}
+
+.portfolio-grid {
+  grid-template-columns: repeat(auto-fit,minmax(310px,1fr));
+}
+
+.card,
+.package-card,
+.testimonial-card {
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: var(--shadow-soft);
+  transition: 0.25s;
+}
+
+.package-card {
+  border-radius: 26px;
+  padding: 28px;
+}
+
+.card:hover,
+.package-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-strong);
+}
+
+.package-card:hover {
+  border-color: var(--gold-light);
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  color: var(--gold-dark);
+  margin-bottom: 12px;
+}
+
+.card p,
+.package-card p {
+  color: var(--text-muted);
+}
+
+.package-card h3 {
+  color: var(--text-main);
+  margin-bottom: 8px;
+  font-size: 1.6rem;
+}
+
+.package-card ul {
+  list-style: none;
+  margin: 18px 0;
+  padding: 0;
+}
+
+.package-card li {
+  margin-bottom: 6px;
+  color: var(--text-main);
+}
+
+.package-card li::before {
+  content: "✓ ";
+  color: var(--gold-light);
+  font-weight: 900;
+}
+
+.package-btn {
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-weight: 700;
+  background: linear-gradient(135deg,var(--gold-dark),var(--gold-light));
+  color: #111;
+  display: inline-block;
+  margin-top: 12px;
+}
+
+/* ---------------- PORTFOLIO ---------------- */
+.site-preview {
+  height: 220px;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  margin-bottom: 14px;
+  direction: ltr;
+}
+
+.site-preview iframe {
+  direction: ltr;
+  width: 1200px;
+  height: 900px;
+  transform: scale(0.28);
+  transform-origin: top left;
+  border: 0;
+  display: block;
+}
+
+/* ---------------- PROCESS ---------------- */
+.step {
+  text-align: center;
+}
+
+.step span {
+  display: inline-flex;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--gold-light);
+  color: #111;
+  font-weight: 900;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.step h3 {
+  color: var(--gold-dark);
+}
+
+/* ---------------- TESTIMONIALS ---------------- */
+.testimonial-card .stars {
+  color: var(--gold-light);
+  margin-bottom: 10px;
+}
+
+/* ---------------- FAQ ---------------- */
+.faq-clean {
+  max-width: 850px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+.faq-clean details {
+  background: rgba(255,255,255,0.055);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.faq-clean summary {
+  cursor: pointer;
+  padding: 20px 24px;
+  font-weight: 700;
+  color: var(--gold-light);
+  list-style: none;
+  font-family: Arial, sans-serif !important;
+}
+
+.faq-clean summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-clean summary::after {
+  content: "+";
+  float: left;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+html[dir="ltr"] .faq-clean summary::after {
+  float: right;
+}
+
+.faq-clean details[open] summary::after {
+  content: "−";
+}
+
+.faq-clean p {
+  padding: 0 24px 22px;
+  color: #d8ecff;
+  line-height: 1.8;
+  font-weight: 500;
+  font-family: Arial, sans-serif !important;
+}
+
+/* ---------------- CONTACT ---------------- */
+.contact-wrap {
+  max-width: 700px;
+  margin: auto;
+  background: var(--bg-glass);
+  padding: 30px;
+  border-radius: 26px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+form{
+  display:grid;
+  gap:18px;
+}
+
+input,
+textarea{
+  width:100%;
+  border-radius:16px;
+  padding:14px;
+  border:1px solid var(--border);
+  background:var(--bg-glass2);
+  color:#fff !important;
+  font-size:1rem;
+  font-family:Arial, sans-serif !important;
+  text-align:right !important;
+  direction:rtl !important;
+}
+
+input::placeholder,
+textarea::placeholder{
+  color:#fff !important;
+  opacity:1 !important;
+  font-weight:700;
+  font-family:Arial, sans-serif !important;
+  text-align:right !important;
+  direction:rtl !important;
+}
+
+input[type="tel"]{
+  text-align:right !important;
+  direction:rtl !important;
+}
+
+textarea{
+  min-height:130px;
+}
+
+form button{
+  width:100%;
+  padding:15px;
+  border-radius:14px;
+  border:none;
+  background:linear-gradient(135deg,var(--gold-dark),var(--gold-light));
+  color:#111;
+  font-weight:800;
+  cursor:pointer;
+}
+
+/* ---------------- FLOATING BUTTONS ---------------- */
+.float-whatsapp {
+  position: fixed;
+  right: 0;
+  bottom: 22px;
+  width: 46px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 14px 0 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  box-shadow: 0 0 18px rgba(37,211,102,.35);
+}
+
+.float-whatsapp img {
+  width: 28px;
+  height: 28px;
+}
+
+.float-access {
+  position: fixed;
+  left: 0;
+  bottom: 22px;
+  top: auto;
+  transform: none;
+  width: 46px;
+  height: 60px;
+  background: #1e90ff;
+  border-radius: 0 14px 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 26px;
+  font-weight: 900;
+  color: #fff;
+  z-index: 999;
+  box-shadow: 0 0 18px rgba(30,144,255,.45);
+}
+
+.access-panel {
+  position: fixed;
+  bottom: 22px;
+  left: 54px;
+  top: auto;
+  transform: none;
+  width: 250px;
+  background: rgba(8,8,12,0.96);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+  display: none;
+  z-index: 999;
+}
+
+.access-panel button {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--bg-glass2);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+body.large-text { font-size: 120%; }
+
+body.high-contrast {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+body.high-contrast * {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+body.highlight-links a {
+  outline: 2px solid #f4d06f;
+  text-decoration: underline !important;
+}
+
+body.readable-font {
+  font-family: Arial, sans-serif !important;
+}
+
+body.bold-text * {
+  font-weight: 800 !important;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  padding: 34px 6%;
+  text-align: center;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+}
+
+footer a {
+  font-family: Arial, sans-serif !important;
+  color: var(--gold-light);
+  text-decoration: none;
+  margin: 0 6px;
+  font-weight: 700;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------- MOBILE PORTRAIT ---------------- */
+@media (max-width:768px) and (orientation:portrait) {
+  body{
+  background:none !important;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+
+  background:
+    linear-gradient(rgba(10,10,14,.42), rgba(10,10,14,.62)),
+    url("digital-bg.jpg") center center / cover no-repeat;
+
+  transform:translateZ(0);
+  -webkit-transform:translateZ(0);
+}
+
+  .hero {
+    padding: 112px 5% 32px;
+    min-height: auto;
+  }
+
+  .hero-inner {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 12px !important;
+  }
+
+  .hero .hero-image-frame,
+  .hero #heroImage,
+  .hero-image-frame {
+    display:none !important;
+    visibility:hidden !important;
+    height:0 !important;
+    overflow:hidden !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  .mobile-hero-img {
+    width:92% !important;
+    max-width:92% !important;
+    height:auto !important;
+    margin:18px auto 0 !important;
+    border-radius:22px !important;
+    border:1px solid rgba(212,175,55,.35) !important;
+    box-shadow:0 10px 30px rgba(0,0,0,.28) !important;
+    display:block !important;
+}
+
+  html[lang="he"] .mobile-he { display:block !important; }
+  html[lang="he"] .mobile-en { display:none !important; }
+  html[lang="en"] .mobile-en { display:block !important; }
+  html[lang="en"] .mobile-he { display:none !important; }
+
+  section {
+    padding: 38px 5%;
+  }
+
+  .section-title {
+    margin-bottom: 22px;
+  }
+
+  .services-grid,
+  .packages-grid,
+  .process-grid,
+  .testimonials-grid {
+    gap: 18px;
+  }
+
+  .card,
+  .package-card,
+  .testimonial-card {
+    padding: 22px;
+  }
+
+  .hero-real-buttons {
+    margin-top: 18px;
+    gap: 10px;
+  }
+
+  .hero-real-buttons a {
+    padding:10px 18px;
+    font-size:.95rem;
+  }
+
+  .contact-wrap {
+    padding: 24px;
+  }
+  .process-grid{
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.step{
+  padding:16px !important;
+}
+
+.step span{
+  width:34px;
+  height:34px;
+  font-size:1rem;
+  margin-bottom:6px;
+}
+
+.step h3{
+  font-size:1.15rem;
+  margin-bottom:4px;
+}
+
+.step p{
+  font-size:.82rem;
+  line-height:1.45;
+  margin:0;
+}
+.services-grid{
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.services-grid .card{
+  padding:16px !important;
+  border-radius:18px;
+}
+
+.services-grid .card h3{
+  font-size:1.05rem;
+  line-height:1.35;
+  margin-bottom:8px;
+}
+
+.services-grid .card p{
+  font-size:.82rem;
+  line-height:1.5;
+}
+}
+/* ---------------- MOBILE LANDSCAPE ---------------- */
+@media (max-width:950px) and (orientation:landscape) {
+ body{
+  background:none !important;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+
+  background:
+    linear-gradient(rgba(10,10,14,.38), rgba(10,10,14,.58)),
+    url("digital-bg.jpg") center center / cover no-repeat;
+
+  transform:translateZ(0);
+  -webkit-transform:translateZ(0);
+}
+
+  .hero {
+    padding: 88px 4% 28px;
+    min-height: auto;
+  }
+
+  .hero-inner {
+    padding: 22px 18px;
+  }
+
+  .hero-image-frame {
+    width: min(44vw, 360px);
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 18px;
+  }
+
+  .hero-image-frame img {
+    border-radius: 14px;
+  }
+
+  section {
+    padding: 34px 4%;
+  }
+
+  .section-title {
+    margin-bottom: 20px;
+  }
+
+  .services-grid,
+  .packages-grid,
+  .process-grid,
+  .testimonials-grid {
+    gap: 16px;
+  }
+
+  .hero-real-buttons {
+    margin-top: 16px;
+    gap: 10px;
+  }
+}
+
+/* ---------------- TABLET ---------------- */
+@media (min-width:769px) and (max-width:1180px) and (orientation:portrait) {
+  body{
+    background:none !important;
+  }
+
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+
+    background:
+      linear-gradient(rgba(10,10,14,.46), rgba(10,10,14,.68)),
+      url("digital-bg.jpg") center center / cover no-repeat;
+
+    transform:translateZ(0);
+    -webkit-transform:translateZ(0);
+  }
+  .hero{
+  padding: 92px 5% 20px;
+  min-height:auto;
+}
+
+  .hero-inner{
+    max-width:900px;
+    padding:28px 22px;
+  }
+
+  .hero-title{
+    font-size:clamp(2rem, 4.4vw, 3rem);
+  }
+
+  .hero-sub{
+    font-size:1.05rem;
+  }
+}
+
+/* ---------------- TABLET LANDSCAPE ---------------- */
+@media (min-width:951px) and (max-width:1400px) and (orientation:landscape) {
+  body{
+    background:none !important;
+  }
+
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+
+    background:
+      linear-gradient(rgba(10,10,14,.40), rgba(10,10,14,.62)),
+      url("digital-bg.jpg") center center / cover no-repeat;
+
+    transform:translateZ(0);
+    -webkit-transform:translateZ(0);
+  }
+  .hero{
+    padding-top:105px;
+  }
+}
+/* דסקטופ בלבד */
+@media (min-width:1401px){
+
+  .hero-image-frame{
+    width:min(48%, 520px);
+  }
+} 
+/* מובייל לאורך בלבד */
+@media (max-width: 768px) and (orientation: portrait) {
+
+  .trust-banner{
+    width: 100%;
+    max-width: 100%;
+  }
+
+}  
+
+
+/* ===== MOBILE CARD GRID LOCK ===== */
+@media (max-width:768px) and (orientation:portrait){
+  .services-grid,
+  .process-grid{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:12px !important;
+  }
+}
+
+
+
+/* ===== SUB PAGES UNIFIED LAYOUT ===== */
+.page-intro{
+  padding:130px 6% 24px !important;
+  text-align:center !important;
+}
+.page-intro img{
+  width:min(240px,70%) !important;
+  margin-bottom:20px !important;
+  filter:drop-shadow(0 0 12px rgba(212,175,55,.18));
+}
+#legal{
+  padding:28px 6% 58px;
+}
+#portfolio{
+  padding-top:26px;
+}
+#contact{
+  padding-top:46px;
+}
+.legal-back,
+.page-actions{
+  text-align:center;
+  margin-top:26px;
+}
+.portfolio-actions a,
+.legal-back a,
+.page-actions a{
+  text-decoration:none;
+  display:inline-block;
+  padding:12px 20px;
+  border-radius:14px;
+  font-weight:800;
+  background:linear-gradient(135deg,var(--gold-dark),var(--gold-light));
+  color:#111;
+  margin-top:12px;
+}
+.portfolio-actions a:hover,
+.legal-back a:hover,
+.page-actions a:hover{
+  transform:translateY(-2px);
+}
+@media (max-width:768px) and (orientation:portrait){
+  .page-intro{
+    padding:104px 5% 18px !important;
+  }
+  .page-intro img{
+    width:180px !important;
+    max-width:62% !important;
+    margin-bottom:14px !important;
+  }
+  #legal,
+  #portfolio,
+  #contact{
+    padding-left:5%;
+    padding-right:5%;
+  }
+}
+@media (max-width:950px) and (orientation:landscape){
+  .page-intro{
+    padding:96px 4% 20px !important;
+  }
+}
+@media (min-width:769px) and (max-width:1180px) and (orientation:portrait){
+  .page-intro{
+    padding:105px 5% 22px !important;
+  }
+}
+
+
+/* ===== FINAL GLOBAL FIXES - BLACK GOLD STYLE ===== */
+
+/* כותרות בעיצוב החדש */
+.hero-title,
+.section-title,
+.page-title,
+.page-intro h1,
+h1 {
+  color: var(--gold-light) !important;
+  text-shadow:
+    0 3px 10px rgba(0,0,0,.95),
+    0 0 24px rgba(0,0,0,.85),
+    2px 2px 0 rgba(0,0,0,.55),
+   -2px -2px 0 rgba(0,0,0,.55) !important;
+}
+
+/* כותרות קטנות בתוך כרטיסיות */
+.card h3,
+.package-card h3,
+.guide-card h3,
+.project-card h3 {
+  color: var(--gold-dark) !important;
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000,
+     0 0 12px rgba(212,175,55,.22) !important;
+}
+
+/* הורדת כל הקווים מתחת לקישורים/כפתורים */
+a,
+a:visited,
+a:hover,
+a:active,
+.package-btn,
+.package-btn:visited,
+.package-btn:hover,
+.package-btn:active,
+.btn,
+.btn:visited,
+.btn:hover,
+.btn:active,
+button,
+button:hover,
+.hero-real-buttons a,
+.hero-real-buttons a:hover,
+footer a,
+footer a:hover,
+.home-btn-fixed,
+.home-btn-fixed:hover,
+.float-whatsapp,
+.float-whatsapp:hover {
+  text-decoration: none !important;
+}
+
+/* כל הכפתורים הראשיים שחור-זהב */
+.btn-primary,
+.package-btn,
+form button,
+.hero-real-buttons a,
+.home-btn-fixed {
+  background: #050505 !important;
+  color: #d4af37 !important;
+  border: 1.5px solid #d4af37 !important;
+  background-image: none !important;
+  text-decoration: none !important;
+  box-shadow:
+    0 0 14px rgba(212,175,55,.16),
+    0 8px 22px rgba(0,0,0,.35) !important;
+  transition: .25s ease !important;
+}
+
+.btn-primary:hover,
+.package-btn:hover,
+form button:hover,
+.hero-real-buttons a:hover,
+.home-btn-fixed:hover {
+  background: #111 !important;
+  color: #f4d06f !important;
+  text-decoration: none !important;
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 22px rgba(212,175,55,.28),
+    0 10px 28px rgba(0,0,0,.45) !important;
+}
+
+/* כפתור ווצאפ חדש */
+.float-whatsapp {
+  position: fixed !important;
+  right: 0 !important;
+  left: auto !important;
+  bottom: 92px !important;
+  width: 58px !important;
+  height: 58px !important;
+  background: #050505 !important;
+  border: 1.5px solid #d4af37 !important;
+  border-right: none !important;
+  border-radius: 16px 0 0 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 9999 !important;
+  box-shadow: 0 0 18px rgba(212,175,55,.28) !important;
+  text-decoration:none !important;
+}
+
+.float-whatsapp i {
+  color: #d4af37 !important;
+  font-size: 30px !important;
+  line-height: 1 !important;
+}
+
+/* כפתור נגישות חדש */
+.float-access {
+  position: fixed !important;
+  right: 0 !important;
+  left: auto !important;
+  bottom: 24px !important;
+  width: 58px !important;
+  height: 58px !important;
+  background: #050505 !important;
+  border: 1.5px solid #d4af37 !important;
+  border-right: none !important;
+  border-radius: 16px 0 0 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  color: #d4af37 !important;
+  z-index: 9999 !important;
+  box-shadow: 0 0 18px rgba(212,175,55,.28) !important;
+}
+
+.float-access i {
+  color:#d4af37 !important;
+  font-size:28px !important;
+}
+
+/* פאנל נגישות ליד הכפתור החדש */
+.access-panel {
+  right: 66px !important;
+  left: auto !important;
+  bottom: 24px !important;
+}
+
+/* כפתור לדף הבית */
+.home-btn-fixed{
+  position:fixed;
+  left:18px;
+  bottom:24px;
+  background:#050505 !important;
+  color:#d4af37 !important;
+  border:1.5px solid #d4af37 !important;
+  border-radius:14px;
+  padding:12px 18px;
+  font-weight:800;
+  text-decoration:none !important;
+  z-index:9999;
+  box-shadow:0 0 16px rgba(212,175,55,.18);
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+<!-- HEADER -->
+<header class="premium-site-header">
+  <div class="logo">
+    <a href="index.html" aria-label="DIGITAL 247 NOW Home">
+      <img src="trans.png" alt="DIGITAL 247 NOW" />
+    </a>
+  </div>
+
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">☰</button>
+
+  <nav id="mainNav" class="main-nav">
+    <a href="index.html" data-he="דף הבית" data-en="Home">דף הבית</a>
+    <a href="index.html#services" data-he="שירותים" data-en="Services">שירותים</a>
+    <a href="index.html#packages" data-he="חבילות" data-en="Packages">חבילות</a>
+    <a href="portfolio.html" data-he="תיק עבודות" data-en="Portfolio">תיק עבודות</a>
+    <a href="index.html#contact" data-he="צור קשר" data-en="Contact">צור קשר</a>
+  </nav>
+
+  <button class="lang-toggle" onclick="toggleLang(); swapHeroImage()">English</button>
+</header>
+
+<section class="page-intro">
+<h1 class="hero-title" data-en="Privacy Policy" data-he="מדיניות פרטיות">
+</h1>
+<p class="hero-sub" data-en="How information is collected, stored and used." data-he="כיצד מידע נאסף, נשמר ומשמש באתר.">
+</p>
+</section>
+<section id="legal">
+<div class="contact-wrap" style="max-width:1000px; text-align:right; line-height:2.15;">
+<p data-en="DIGITAL 247 NOW respects user privacy and places great importance on protecting personal information. This Privacy Policy explains how information may be collected, stored, processed and used through this website and its services." data-he="DIGITAL 247 NOW מכבד את פרטיות המשתמשים ורואה חשיבות רבה בשמירה על מידע אישי. מדיניות פרטיות זו נועדה להסביר כיצד מידע נאסף, נשמר, מעובד ומשמש במסגרת השימוש באתר ובשירותים המוצעים בו."></p>
+<h3 data-en="1. Information Collection" data-he="1. איסוף מידע"></h3>
+<p data-en="When using the website, submitting forms, contacting us or interacting with certain services, information such as name, phone number, email, inquiry content, technical usage data, browser type, device type or IP address may be collected." data-he="בעת שימוש באתר, יצירת קשר, שליחת טופס, פנייה עסקית או שימוש בשירותים מסוימים, ייתכן וייאסף מידע כגון שם, טלפון, כתובת דוא״ל, תוכן פנייה, נתוני שימוש טכניים, סוג מכשיר, דפדפן, כתובת IP או מידע רלוונטי נוסף."></p>
+<h3 data-en="2. Use of Information" data-he="2. מטרות השימוש במידע"></h3>
+<p data-en="Collected information may be used for communication, service delivery, marketing, performance analysis, website improvement, security, personalization or legal compliance." data-he="המידע עשוי לשמש לצורכי יצירת קשר, מתן שירות, שיפור חוויית משתמש, שיווק, התאמת שירותים, אבטחה, ניתוח ביצועים, שיפור האתר, תקשורת עסקית או עמידה בדרישות חוקיות."></p>
+<h3 data-en="3. Cookies &amp; Analytics" data-he="3. טכנולוגיות מדידה וקובצי Cookies"></h3>
+<p data-en="This website may use cookies, pixels, analytics tools or similar technologies for functionality, measurement, optimization, marketing and advertising purposes." data-he="האתר עשוי להשתמש בקובצי Cookies, פיקסלים, כלי אנליטיקה, מערכות מדידה או טכנולוגיות דומות לצורך תפעול תקין, מדידת ביצועים, שיפור שירותים, פרסום ושיווק."></p>
+<h3 data-en="4. Third-Party Sharing" data-he="4. מסירת מידע לצדדים שלישיים"></h3>
+<p data-en="Personal information is not sold to third parties, though trusted third-party providers such as hosting, analytics, advertising, cloud or communication services may process relevant data where operationally required." data-he="בעלי האתר אינם מוכרים מידע אישי לצדדים שלישיים, אך ייתכן שימוש בשירותי צד ג׳ כגון טפסים, אחסון, אנליטיקה, מערכות פרסום, שירותי ענן או ספקים טכנולוגיים, בכפוף לצורך התפעולי או העסקי."></p>
+<h3 data-en="5. Data Security" data-he="5. אבטחת מידע"></h3>
+<p data-en="Reasonable security measures are used to protect information, but no digital system or internet transmission can be guaranteed as completely secure." data-he="DIGITAL 247 NOW נוקט באמצעים סבירים להגנה על מידע, אך אין אפשרות להבטיח אבטחה מוחלטת של מערכות דיגיטליות או העברת מידע ברשת."></p>
+<h3 data-en="6. Data Retention" data-he="6. שמירת מידע"></h3>
+<p data-en="Information may be retained as needed for service delivery, operational use, legal compliance, backup, business improvement or legitimate business purposes." data-he="מידע עשוי להישמר למשך הזמן הנדרש לצורכי שירות, תפעול, שיווק, שיפור עסקי, גיבוי, דרישות חוקיות או הגנה משפטית, בהתאם לצורך."></p>
+<h3 data-en="7. User Rights" data-he="7. זכויות משתמש"></h3>
+<p data-en="Users may contact us regarding updates, corrections or inquiries related to submitted information, subject to applicable legal or operational limitations." data-he="משתמשים רשאים לפנות בנושא עדכון, תיקון או בירור לגבי מידע שנמסר, בכפוף למגבלות טכניות, עסקיות או חוקיות רלוונטיות."></p>
+<h3 data-en="8. External Links &amp; Services" data-he="8. קישורים ושירותים חיצוניים"></h3>
+<p data-en="This website may include external links or integrations. This Privacy Policy does not apply to third-party websites or services not directly operated by the Website Owners." data-he="האתר עשוי לכלול קישורים או אינטגרציות עם שירותים חיצוניים. מדיניות זו אינה חלה על אתרים או שירותים שאינם מופעלים ישירות על ידי בעלי האתר."></p>
+<h3 data-en="9. Policy Updates" data-he="9. שינויים במדיניות"></h3>
+<p data-en="This Privacy Policy may be updated periodically due to technological, operational, business or regulatory changes." data-he="בעלי האתר רשאים לעדכן מדיניות פרטיות זו מעת לעת, בהתאם לשינויים טכנולוגיים, עסקיים, רגולטוריים או תפעוליים."></p>
+<h3 data-en="10. Contact" data-he="10. יצירת קשר"></h3>
+<p data-en="For privacy-related questions or requests, users may contact us through the communication channels listed on this website." data-he="לשאלות, בירורים או פניות בנושא פרטיות, ניתן ליצור קשר באמצעות פרטי ההתקשרות המופיעים באתר."></p>
+</div>
+
+<div class="legal-back"><a data-en="Back to Home" data-he="חזרה לדף הבית" href="index.html">חזרה לדף הבית</a></div>
+</section>
+
+<!-- WHATSAPP -->
+<a class="float-whatsapp" href="https://wa.me/972552828338" target="_blank" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- ACCESSIBILITY -->
+<div class="float-access access-tab" onclick="toggleAccess()" aria-label="Accessibility">
+  <i class="fas fa-universal-access"></i>
+</div>
+
+<div class="access-panel" id="accessPanel">
+  <button onclick="document.body.classList.toggle('large-text')" data-he="טקסט גדול" data-en="Large Text">טקסט גדול</button>
+  <button onclick="document.body.classList.toggle('high-contrast')" data-he="ניגודיות גבוהה" data-en="High Contrast">ניגודיות גבוהה</button>
+  <button onclick="document.body.classList.toggle('highlight-links')" data-he="הדגשת קישורים" data-en="Highlight Links">הדגשת קישורים</button>
+  <button onclick="document.body.classList.toggle('readable-font')" data-he="פונט קריא" data-en="Readable Font">פונט קריא</button>
+  <button onclick="document.body.classList.toggle('bold-text')" data-he="טקסט מודגש" data-en="Bold Text">טקסט מודגש</button>
+  <button onclick="resetAccess()" data-he="איפוס" data-en="Reset">איפוס</button>
+</div>
+
+<footer>
+  <div style="margin-bottom:14px;">
+    <a href="index.html" data-he="דף הבית" data-en="Home"></a> |
+    <a href="terms.html" data-he="תקנון" data-en="Terms"></a> |
+    <a href="privacy.html" data-he="מדיניות פרטיות" data-en="Privacy Policy"></a> |
+    <a href="accessibility.html" data-he="הצהרת נגישות" data-en="Accessibility Statement"></a>
+  </div>
+  <div>© DIGITAL 247 NOW - 2026</div>
+</footer>
+
+
+<script>
+/* CONTACT FORM */
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+  contactForm.addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const form = this;
+    const data = new FormData(form);
+    const msg = document.getElementById("formMessage");
+
+    if (msg) msg.style.display = "none";
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "application/json" }
+      });
+
+      if (msg) {
+        msg.innerText = response.ok ? "הפנייה נשלחה בהצלחה" : "אירעה שגיאה. נסה שוב.";
+        msg.style.display = "block";
+      }
+      if (response.ok) form.reset();
+    } catch (error) {
+      if (msg) {
+        msg.innerText = "אירעה שגיאה. נסה שוב.";
+        msg.style.display = "block";
+      }
+    }
+  });
+}
+
+/* LANGUAGE */
+let lang = "he";
+
+function toggleLang() {
+  lang = (lang === "he" ? "en" : "he");
+  document.documentElement.lang = lang;
+  document.documentElement.dir = (lang === "he" ? "rtl" : "ltr");
+
+  document.querySelectorAll("[data-he]").forEach(el => {
+    el.innerHTML = el.getAttribute(`data-${lang}`);
+  });
+
+  const langBtn = document.querySelector(".lang-toggle");
+  if (langBtn) langBtn.innerText = (lang === "he" ? "English" : "עברית");
+
+  document.querySelectorAll("[data-placeholder-he]").forEach(el => {
+    el.placeholder = el.getAttribute(`data-placeholder-${lang}`);
+  });
+}
+
+function toggleMenu() {
+  const nav = document.getElementById("mainNav");
+  if (nav) nav.classList.toggle("open");
+}
+
+document.addEventListener("click", function(e) {
+  const nav = document.getElementById("mainNav");
+  const burger = document.querySelector(".hamburger");
+
+  if (nav && burger && !nav.contains(e.target) && !burger.contains(e.target)) {
+    nav.classList.remove("open");
+  }
+});
+
+document.querySelectorAll("#mainNav a").forEach(link => {
+  link.addEventListener("click", () => {
+    const nav = document.getElementById("mainNav");
+    if (nav) nav.classList.remove("open");
+  });
+});
+
+function toggleAccess() {
+  const panel = document.getElementById("accessPanel");
+  if (panel) panel.style.display = (panel.style.display === "block" ? "none" : "block");
+}
+
+function resetAccess() {
+  document.body.classList.remove("large-text", "high-contrast", "highlight-links", "readable-font", "bold-text");
+  const panel = document.getElementById("accessPanel");
+  if (panel) panel.style.display = "none";
+}
+
+document.addEventListener("click", e => {
+  const panel = document.getElementById("accessPanel");
+  const btn = document.querySelector(".float-access");
+
+  if (panel && btn && !panel.contains(e.target) && !btn.contains(e.target)) {
+    panel.style.display = "none";
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.documentElement.lang === "he") {
+    document.querySelectorAll("[data-he]").forEach(el => {
+      el.innerHTML = el.getAttribute("data-he");
+    });
+  }
+  swapHeroImage();
+});
+
+function swapHeroImage() {
+  const hero = document.getElementById("heroImage");
+  if (!hero) return;
+  const isHebrew = document.documentElement.lang === "he";
+  hero.src = isHebrew ? "hero-premium.png" : "hero-premium-en.png";
+}
+</script>
+
+<a href="index.html" class="home-btn-fixed" data-he="לדף הבית" data-en="Home">לדף הבית</a>
+</body>
+</html>

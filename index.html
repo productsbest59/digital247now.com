@@ -591,7 +591,40 @@ section {
   display: inline-block;
   margin-top: 12px;
 }
+.btn-primary,
+.package-btn,
+form button,
+.hero-real-buttons a {
+  background: #050505 !important;
+  color: #d4af37 !important;
+  border: 1.5px solid #d4af37 !important;
 
+  box-shadow:
+    0 0 14px rgba(212,175,55,.16),
+    0 8px 22px rgba(0,0,0,.35);
+
+  transition: .25s ease;
+}
+
+.btn-primary:hover,
+.package-btn:hover,
+form button:hover,
+.hero-real-buttons a:hover {
+  background: #111 !important;
+  color: #f4d06f !important;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 0 22px rgba(212,175,55,.28),
+    0 10px 28px rgba(0,0,0,.45);
+}
+
+.package-btn,
+.btn-primary,
+form button {
+  background-image: none !important;
+}
 /* ---------------- PORTFOLIO ---------------- */
 .site-preview {
   height: 220px;

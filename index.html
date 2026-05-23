@@ -586,18 +586,34 @@ section {
   padding: 12px 20px;
   border-radius: 14px;
   font-weight: 700;
-  background: linear-gradient(135deg,var(--gold-dark),var(--gold-light));
-  color: #111;
+
+  background: #050505 !important;
+  color: #d4af37 !important;
+
+  border: 1.5px solid #d4af37 !important;
+
   display: inline-block;
   margin-top: 12px;
+
+  text-decoration: none !important;
+
+  box-shadow:
+    0 0 14px rgba(212,175,55,.16),
+    0 8px 22px rgba(0,0,0,.35);
+
+  transition: .25s ease;
 }
+
 .btn-primary,
 .package-btn,
 form button,
 .hero-real-buttons a {
   background: #050505 !important;
   color: #d4af37 !important;
+
   border: 1.5px solid #d4af37 !important;
+
+  text-decoration: none !important;
 
   box-shadow:
     0 0 14px rgba(212,175,55,.16),
@@ -612,6 +628,8 @@ form button:hover,
 .hero-real-buttons a:hover {
   background: #111 !important;
   color: #f4d06f !important;
+
+  text-decoration: none !important;
 
   transform: translateY(-2px);
 

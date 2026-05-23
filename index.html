@@ -753,64 +753,103 @@ form button{
 }
 
 /* ---------------- FLOATING BUTTONS ---------------- */
+
 .float-whatsapp {
   position: fixed;
   right: 0;
-  bottom: 22px;
-  width: 46px;
-  height: 60px;
-  background: #000 !important;
+  bottom: 92px;
+
+  width: 58px;
+  height: 58px;
+
+  background: #050505 !important;
+
   border: 1.5px solid #d4af37;
   border-right: none;
-  border-radius: 14px 0 0 14px;
+
+  border-radius: 16px 0 0 16px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   z-index: 999;
-  box-shadow: 0 0 14px rgba(212,175,55,.22);
+
+  box-shadow: 0 0 18px rgba(212,175,55,.28);
 }
 
 .float-whatsapp img {
-  width: 28px;
-  height: 28px;
-  filter: sepia(1) saturate(5) hue-rotate(5deg) brightness(1.15);
+  width: 30px;
+  height: 30px;
+
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(74%)
+    sepia(53%)
+    saturate(557%)
+    hue-rotate(3deg)
+    brightness(94%)
+    contrast(92%);
 }
 
 .float-access {
   position: fixed;
-  left: 0;
-  bottom: 22px;
-  top: auto;
-  transform: none;
-  width: 46px;
-  height: 60px;
-  background: #000 !important;
+
+  right: 0;
+  left: auto;
+
+  bottom: 24px;
+
+  width: 58px;
+  height: 58px;
+
+  background: #050505 !important;
+
   border: 1.5px solid #d4af37;
-  border-left: none;
-  border-radius: 0 14px 14px 0;
+  border-right: none;
+
+  border-radius: 16px 0 0 16px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   cursor: pointer;
-  font-size: 26px;
+
+  font-size: 28px;
   font-weight: 900;
+
   color: #d4af37 !important;
+
   z-index: 999;
-  box-shadow: 0 0 14px rgba(212,175,55,.22);
+
+  box-shadow: 0 0 18px rgba(212,175,55,.28);
 }
 
 .access-panel {
   position: fixed;
-  bottom: 22px;
-  left: 54px;
+
+  bottom: 24px;
+  right: 66px;
+
+  left: auto;
   top: auto;
+
   transform: none;
+
   width: 250px;
+
   background: rgba(8,8,12,0.96);
+
   border: 1px solid var(--border);
+
   border-radius: 18px;
+
   padding: 16px;
+
   display: none;
+
   z-index: 999;
 }
 
@@ -824,7 +863,10 @@ form button{
   color: var(--text-main);
   font-weight: 700;
 }
-body.large-text { font-size: 120%; }
+
+body.large-text {
+  font-size: 120%;
+}
 
 body.high-contrast {
   background: #000 !important;

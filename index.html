@@ -663,6 +663,64 @@ form button:hover,
 form button {
   background-image: none !important;
 }
+
+.video-service-card{
+  max-width:1200px;
+  margin:24px auto 0;
+  padding:22px 28px;
+
+  background:var(--bg-glass);
+  border:1px solid var(--border);
+  border-radius:22px;
+
+  box-shadow:var(--shadow-soft);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+
+  text-align:center;
+}
+
+.video-service-card i{
+  font-size:2rem;
+  color:var(--gold-dark);
+}
+
+.video-service-card h3{
+  margin:0;
+  color:var(--gold-dark);
+  font-size:1.4rem;
+}
+
+.video-service-card p{
+  margin:6px 0 0;
+  color:var(--text-muted);
+}
+
+@media (max-width:768px){
+
+  .video-service-card{
+    margin-top:14px;
+    padding:16px;
+    border-radius:18px;
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .video-service-card h3{
+    font-size:1.05rem;
+    line-height:1.4;
+  }
+
+  .video-service-card p{
+    font-size:.82rem;
+    line-height:1.5;
+  }
+
+}
+
 /* ---------------- PORTFOLIO ---------------- */
 .site-preview {
   height: 220px;
@@ -1430,6 +1488,24 @@ body::before{
   </p>
 </div>
   </div>
+
+<div class="video-service-card">
+  <i class="fas fa-video"></i>
+
+  <div>
+    <h3
+      data-he="הפקת סרטונים לסושיאל מדיה ולמודעות פרסומת"
+      data-en="Social Media & Advertising Video Production">
+      הפקת סרטונים לסושיאל מדיה ולמודעות פרסומת
+    </h3>
+
+    <p
+      data-he="סרטוני תדמית, רילסים, סטוריז ותוכן שיווקי מקצועי לעסקים."
+      data-en="Professional promotional videos, reels, stories and marketing content for businesses.">
+      סרטוני תדמית, רילסים, סטוריז ותוכן שיווקי מקצועי לעסקים.
+    </p>
+  </div>
+</div>
 </section>
 
 <!-- PACKAGES -->

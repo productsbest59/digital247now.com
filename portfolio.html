@@ -595,16 +595,41 @@ section {
   border: 1px solid var(--border);
   margin-bottom: 14px;
   direction: ltr;
+  background:rgba(255,255,255,.035);
 }
 
-.site-preview iframe {
-  direction: ltr;
-  width: 1200px;
-  height: 900px;
-  transform: scale(0.28);
-  transform-origin: top left;
-  border: 0;
-  display: block;
+.preview-placeholder{
+  height:220px;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  text-align:center;
+  color:#d4af37;
+  background:
+    radial-gradient(circle at top, rgba(212,175,55,.14), transparent 42%),
+    linear-gradient(135deg, rgba(255,255,255,.06), rgba(255,255,255,.015));
+}
+
+.preview-placeholder i{
+  font-size:2.35rem;
+  color:#f4d06f;
+  filter:drop-shadow(0 0 12px rgba(212,175,55,.22));
+}
+
+.preview-placeholder span{
+  font-size:1.25rem;
+  font-weight:900;
+  letter-spacing:.2px;
+  text-shadow:0 2px 8px rgba(0,0,0,.75);
+}
+
+.preview-placeholder small{
+  color:#bfbfbf;
+  font-size:.85rem;
+  font-weight:700;
 }
 
 /* ---------------- PROCESS ---------------- */
@@ -1439,90 +1464,99 @@ form button:hover,
 </section>
 <section id="portfolio">
 <div class="portfolio-grid">
-<div class="card portfolio-card">
-<div class="site-preview">
-<iframe loading="lazy" src="https://naya-jewelry.com"></iframe>
-</div>
-<h3>Naya Jewelry</h3>
-<p data-en="Premium presence for a jewelry brand." data-he="נוכחות יוקרתית למותג תכשיטים."></p>
-<div class="portfolio-actions">
-<a data-en="Open" data-he="פתח אתר" href="https://naya-jewelry.com" target="_blank"></a>
-</div>
-</div>
-<div class="card portfolio-card">
-<div class="site-preview">
-<iframe loading="lazy" src="https://funnycurse.com"></iframe>
-</div>
-<h3>Funny Curse</h3>
-<p data-en="Content platform with strong SEO." data-he="פלטפורמת תוכן עם SEO חזק."></p>
-<div class="portfolio-actions">
-<a data-en="Open" data-he="פתח אתר" href="https://funnycurse.com" target="_blank"></a>
-</div>
-</div>
-<div class="card portfolio-card">
-<div class="site-preview">
-<iframe loading="lazy" src="https://electroshop-il.com"></iframe>
-</div>
-<h3>Electroshop IL</h3>
-<p data-en="High-converting landing page for repair services." data-he="דף נחיתה ממיר לעסק תיקונים."></p>
-<div class="portfolio-actions">
-<a data-en="Open" data-he="פתח אתר" href="https://electroshop-il.com" target="_blank"></a>
-</div>
-</div>
-<div class="card portfolio-card">
-<div class="site-preview">
-<iframe loading="lazy" src="https://kohphangantours.com"></iframe>
-</div>
-<h3>Koh Phangan Tours</h3>
-<p data-en="Tourism &amp; affiliate platform for experiences, parties and tours in Koh Phangan." data-he="אתר תיירות ואפיליאציה לחוויות, מסיבות וסיורים בקופנגן."></p>
-<div class="portfolio-actions">
-<a data-en="Open" data-he="פתח אתר" href="https://kohphangantours.com" target="_blank"></a>
-</div>
-</div>
+
 <div class="card portfolio-card">
   <div class="site-preview">
-    <iframe loading="lazy" src="https://electroshop-il.com/carholder.html"></iframe>
+    <div class="preview-placeholder">
+      <i class="fas fa-gem"></i>
+      <span>Naya Jewelry</span>
+      <small data-he="תצוגה מקדימה תתווסף בקרוב" data-en="Preview image coming soon">תצוגה מקדימה תתווסף בקרוב</small>
+    </div>
   </div>
-
-  <h3>CarHold Pro</h3>
-
-  <p
-    data-he="דף מוצר מתקדם למחזיק טלפון לרכב עם עיצוב ממוקד מכירה, התאמה מלאה למובייל וחוויית משתמש מודרנית."
-    data-en="A conversion-focused product page for a car phone holder featuring responsive design and modern user experience.">
-  </p>
-
+  <h3>Naya Jewelry</h3>
+  <p data-en="Premium presence for a jewelry brand." data-he="נוכחות יוקרתית למותג תכשיטים."></p>
   <div class="portfolio-actions">
-    <a
-      data-he="פתח אתר"
-      data-en="Open"
-      href="https://electroshop-il.com/carholder.html"
-      target="_blank">
-    </a>
+    <a data-en="Open" data-he="פתח אתר" href="https://naya-jewelry.com" target="_blank" rel="noopener"></a>
   </div>
 </div>
+
+<div class="card portfolio-card">
+  <div class="site-preview">
+    <div class="preview-placeholder">
+      <i class="fas fa-face-laugh-squint"></i>
+      <span>Funny Curse</span>
+      <small data-he="תצוגה מקדימה תתווסף בקרוב" data-en="Preview image coming soon">תצוגה מקדימה תתווסף בקרוב</small>
+    </div>
+  </div>
+  <h3>Funny Curse</h3>
+  <p data-en="Content platform with strong SEO." data-he="פלטפורמת תוכן עם SEO חזק."></p>
+  <div class="portfolio-actions">
+    <a data-en="Open" data-he="פתח אתר" href="https://funnycurse.com" target="_blank" rel="noopener"></a>
+  </div>
+</div>
+
+<div class="card portfolio-card">
+  <div class="site-preview">
+    <div class="preview-placeholder">
+      <i class="fas fa-mobile-screen-button"></i>
+      <span>Electroshop IL</span>
+      <small data-he="תצוגה מקדימה תתווסף בקרוב" data-en="Preview image coming soon">תצוגה מקדימה תתווסף בקרוב</small>
+    </div>
+  </div>
+  <h3>Electroshop IL</h3>
+  <p data-en="High-converting landing page for repair services." data-he="דף נחיתה ממיר לעסק תיקונים."></p>
+  <div class="portfolio-actions">
+    <a data-en="Open" data-he="פתח אתר" href="https://electroshop-il.com" target="_blank" rel="noopener"></a>
+  </div>
+</div>
+
+<div class="card portfolio-card">
+  <div class="site-preview">
+    <div class="preview-placeholder">
+      <i class="fas fa-umbrella-beach"></i>
+      <span>Koh Phangan Tours</span>
+      <small data-he="תצוגה מקדימה תתווסף בקרוב" data-en="Preview image coming soon">תצוגה מקדימה תתווסף בקרוב</small>
+    </div>
+  </div>
+  <h3>Koh Phangan Tours</h3>
+  <p data-en="Tourism &amp; affiliate platform for experiences, parties and tours in Koh Phangan." data-he="אתר תיירות ואפיליאציה לחוויות, מסיבות וסיורים בקופנגן."></p>
+  <div class="portfolio-actions">
+    <a data-en="Open" data-he="פתח אתר" href="https://kohphangantours.com" target="_blank" rel="noopener"></a>
+  </div>
+</div>
+
+<div class="card portfolio-card">
+  <div class="site-preview">
+    <div class="preview-placeholder">
+      <i class="fas fa-car-side"></i>
+      <span>CarHold Pro</span>
+      <small data-he="תצוגה מקדימה תתווסף בקרוב" data-en="Preview image coming soon">תצוגה מקדימה תתווסף בקרוב</small>
+    </div>
+  </div>
+  <h3>CarHold Pro</h3>
+  <p data-he="דף מוצר מתקדם למחזיק טלפון לרכב עם עיצוב ממוקד מכירה, התאמה מלאה למובייל וחוויית משתמש מודרנית." data-en="A conversion-focused product page for a car phone holder featuring responsive design and modern user experience."></p>
+  <div class="portfolio-actions">
+    <a data-he="פתח אתר" data-en="Open" href="https://electroshop-il.com/carholder.html" target="_blank" rel="noopener"></a>
+  </div>
+</div>
+
+<div class="card portfolio-card">
+  <div class="site-preview">
+    <div class="preview-placeholder">
+      <i class="fas fa-music"></i>
+      <span>Daily Birthday Song</span>
+      <small data-he="תצוגה מקדימה תתווסף בקרוב" data-en="Preview image coming soon">תצוגה מקדימה תתווסף בקרוב</small>
+    </div>
+  </div>
+  <h3>Daily Birthday Song</h3>
+  <p data-he="אתר מוזיקלי דו־לשוני עבור רומי גולדהמר הכולל שירי יום הולדת חודשיים, שיר יומי, הזמנת שירים בהתאמה אישית, נגישות, SEO ו-Google Analytics." data-en="A bilingual music website for Romi Goldhamer featuring monthly birthday songs, daily music content, custom song requests, accessibility, SEO and Google Analytics."></p>
+  <div class="portfolio-actions">
+    <a data-he="פתח אתר" data-en="Open" href="https://daylisong.com" target="_blank" rel="noopener"></a>
+  </div>
+</div>
+
 </div>
 </section>
-<div class="card portfolio-card">
-  <div class="site-preview">
-    <iframe loading="lazy" src="https://daylisong.com"></iframe>
-  </div>
-
-  <h3>Daily Birthday Song</h3>
-
-  <p
-    data-he="אתר מוזיקלי דו־לשוני עבור רומי גולדהמר הכולל שירי יום הולדת חודשיים, שיר יומי, הזמנת שירים בהתאמה אישית, נגישות, SEO ו-Google Analytics."
-    data-en="A bilingual music website for Romi Goldhamer featuring monthly birthday songs, daily music content, custom song requests, accessibility, SEO and Google Analytics.">
-  </p>
-
-  <div class="portfolio-actions">
-    <a
-      data-he="פתח אתר"
-      data-en="Open"
-      href="https://daylisong.com"
-      target="_blank">
-    </a>
-  </div>
-</div>
 <section id="contact">
 <h2 class="section-title" data-en="Contact" data-he="צור קשר"></h2>
 <div class="contact-wrap">

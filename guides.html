@@ -1213,6 +1213,26 @@ body::before{
   border-color:var(--gold-light);
 }
 
+.guide-cover-link{
+  display:block;
+  margin-bottom:20px;
+  border-radius:16px;
+  overflow:hidden;
+}
+
+.guide-cover-link:focus-visible{
+  outline:3px solid var(--gold-light);
+  outline-offset:4px;
+}
+
+.guide-cover{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:1;
+  object-fit:contain;
+}
+
 .guide-label{
   display:inline-block;
   margin-bottom:12px;
@@ -1514,6 +1534,10 @@ form button:hover,
     <div class="guides-grid">
 
       <article class="guide-card">
+        <a class="guide-cover-link" href="https://payhip.com/b/p9Eve">
+          <img class="guide-cover" src="digital247now-payhip-cover.png" width="1254" height="1254"
+               alt="DIGITAL247NOW — מדריך הבסיס / Starter Guide — עברית + English" loading="lazy" decoding="async">
+        </a>
         <span class="guide-label" data-he="מדריך בסיס" data-en="Starter Guide">מדריך בסיס</span>
         <h2 data-he="איך להכין עסק לנוכחות דיגיטלית" data-en="How to Prepare a Business for Digital Presence">איך להכין עסק לנוכחות דיגיטלית</h2>
         <p data-he="מדריך לבעלי עסקים שרוצים להבין מה צריך לפני שבונים אתר, דף נחיתה או קמפיין."
@@ -1525,9 +1549,9 @@ form button:hover,
           <li data-he="הכנת חומרים ותמונות" data-en="Preparing content and images">הכנת חומרים ותמונות</li>
           <li data-he="טעויות נפוצות שכדאי להימנע מהן" data-en="Common mistakes to avoid">טעויות נפוצות שכדאי להימנע מהן</li>
         </ul>
-        <div class="guide-price" data-he="₪49" data-en="$15">₪49</div>
-        <div class="guide-note" data-he="קובץ PDF להורדה מיידית" data-en="Instant PDF download">קובץ PDF להורדה מיידית</div>
-        <a class="package-btn" href="#" data-he="לרכישה" data-en="Buy Now">לרכישה</a>
+        <div class="guide-price" data-he="₪49" data-en="ILS 49">₪49</div>
+        <div class="guide-note" data-he="שני קובצי PDF בעברית ובאנגלית · 18 עמודים בכל שפה · להורדה לאחר הרכישה" data-en="Two PDFs: Hebrew + English · 18 pages per language · Download after purchase">שני קובצי PDF בעברית ובאנגלית · 18 עמודים בכל שפה · להורדה לאחר הרכישה</div>
+        <a class="package-btn" href="https://payhip.com/b/p9Eve" data-he="לרכישה" data-en="Buy Now">לרכישה</a>
       </article>
 
       <article class="guide-card">

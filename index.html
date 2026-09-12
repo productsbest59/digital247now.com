@@ -1372,6 +1372,26 @@ body::before{
   }
 }
 
+
+/* Portfolio feature with original project screenshots */
+.portfolio-feature{max-width:1200px;margin:auto;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);align-items:center;gap:28px;padding:40px 32px;border:1px solid var(--gold-light);border-radius:28px;background:radial-gradient(ellipse at 75% 50%,rgba(212,175,55,.13),transparent 65%),#0b0c0f;box-shadow:0 18px 55px rgba(0,0,0,.4);}
+.portfolio-feature-copy{min-width:0;}
+.portfolio-eyebrow{display:block;color:var(--gold-light);font-size:.85rem;font-weight:700;letter-spacing:.06em;margin-bottom:16px;}
+.portfolio-feature h2{color:var(--gold-light);font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.25;margin:0 0 20px;}
+.portfolio-feature p{color:var(--text-muted);line-height:1.8;margin:0 0 22px;}
+.portfolio-montage{display:block;position:relative;aspect-ratio:1.25;min-width:0;direction:ltr;border-radius:18px;}
+.portfolio-screen{position:absolute;width:48%;padding:13px 3px 3px;background:#17191e;border:1px solid rgba(244,208,111,.65);border-radius:9px;box-shadow:0 10px 28px #0009;overflow:hidden;}
+.portfolio-screen::before{content:"•••";position:absolute;top:-5px;left:8px;font-size:13px;letter-spacing:3px;color:#bca15f;}
+.portfolio-screen img{display:block;width:100%;height:auto;aspect-ratio:2.05;object-fit:cover;object-position:top;border-radius:3px;}
+.screen-electro{top:3%;left:0;transform:rotate(-4deg);}
+.screen-aviva{top:3%;right:0;transform:rotate(4deg);}
+.screen-travel{width:68%;top:29%;left:16%;z-index:2;}
+.screen-audio{bottom:2%;left:0;transform:rotate(-3deg);z-index:3;}
+.screen-kink{bottom:2%;right:0;transform:rotate(3deg);z-index:3;}
+.portfolio-montage:focus-visible{outline:3px solid var(--gold-light);outline-offset:6px;}
+@media(max-width:850px){.portfolio-feature{grid-template-columns:1fr;padding:28px 22px;gap:22px;}.portfolio-montage{width:100%;max-width:680px;justify-self:center;}.portfolio-feature h2{font-size:2rem;}}
+@media(max-width:480px){.portfolio-feature{padding:24px 16px;border-radius:22px;}.portfolio-feature h2{font-size:1.7rem;}.portfolio-feature .package-btn{display:block;text-align:center;}}
+
 </style>
 </head>
 
@@ -1563,18 +1583,21 @@ body::before{
   </div>
 </section>
 <!-- PORTFOLIO -->
-<section id="portfolio">
-  <h2 class="section-title" data-he="תיק עבודות" data-en="Portfolio"></h2>
-
-  <div class="card" style="max-width:700px; margin:auto; text-align:center;">
-    <h3 data-he="צפה בפרויקטים נבחרים" data-en="View Selected Projects"></h3>
-
-    <p data-he="עמוד ייעודי עם תיק עבודות מלא, פרויקטים ודוגמאות."
-       data-en="A dedicated portfolio page with featured projects and examples."></p>
-
-    <a href="portfolio.html" class="package-btn"
-       data-he="לצפייה בתיק עבודות"
-       data-en="View Portfolio"></a>
+<section id="portfolio" aria-labelledby="portfolio-heading">
+  <div class="portfolio-feature">
+    <div class="portfolio-feature-copy">
+      <span class="portfolio-eyebrow" data-he="תיק העבודות שלנו" data-en="OUR PORTFOLIO">תיק העבודות שלנו</span>
+      <h2 id="portfolio-heading" data-he="ככה זה נראה כשהעסק שלך מקבל במה." data-en="Give your business a place to stand out.">ככה זה נראה כשהעסק שלך מקבל במה.</h2>
+      <p data-he="הצצה לאתרים ודפי נחיתה שעיצבנו ובנינו — מהרעיון ועד הפרטים הקטנים." data-en="Explore websites and landing pages we designed and built — from the first idea to the finishing touches.">הצצה לאתרים ודפי נחיתה שעיצבנו ובנינו — מהרעיון ועד הפרטים הקטנים.</p>
+      <a href="portfolio.html" class="package-btn" data-he="גלו את הפרויקטים שלנו" data-en="Explore our projects">גלו את הפרויקטים שלנו</a>
+    </div>
+    <a class="portfolio-montage" href="portfolio.html" aria-label="View portfolio / לצפייה בתיק העבודות">
+      <span class="portfolio-screen screen-electro"><img src="electroshop-preview.jpg" alt="Electroshop — מעבדת סלולר" loading="lazy" decoding="async"></span>
+      <span class="portfolio-screen screen-aviva"><img src="aviva-preview.jpg" alt="Aviva Eyelash — עיצוב ריסים וגבות" loading="lazy" decoding="async"></span>
+      <span class="portfolio-screen screen-travel"><img src="kohphangan-preview.jpg" alt="Koh Phangan Tours" loading="lazy" decoding="async"></span>
+      <span class="portfolio-screen screen-audio"><img src="proaudio.jpg" alt="Electroshop — DJ, Audio and Lighting" loading="lazy" decoding="async"></span>
+      <span class="portfolio-screen screen-kink"><img src="kink-preview.png" alt="KinkThailand — Community Website" loading="lazy" decoding="async"></span>
+    </a>
   </div>
 </section>
 <!-- PROCESS -->

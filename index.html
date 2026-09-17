@@ -356,24 +356,38 @@ header.premium-site-header .main-nav a:hover{
 /* ---------------- HERO ---------------- */
 
 .hero {
-  min-height: 88vh;
-  padding: 130px 6% 55px;
+  min-height: auto;
+  padding: 118px 4% 46px;
   background: transparent !important;
   display: flex;
   justify-content: center;
 }
 
 .hero-inner {
-  max-width: 1000px;
+  max-width: 1280px;
   width: 100%;
-  padding: 30px 26px;
-  background: var(--bg-glass);
-  border: 1px solid var(--border);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: var(--shadow-strong);
-  border-radius: 32px;
+  padding: 24px 22px;
+  background: rgba(8,8,10,.20);
+  border: 1px solid rgba(212,175,55,.26);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  box-shadow: 0 16px 42px rgba(0,0,0,.26);
+  border-radius: 26px;
   text-align: center;
+}
+
+/* Keep the page H1 available to search engines and assistive technology
+   without reserving visual space above the artwork. */
+.hero-title-visually-hidden {
+  position:absolute !important;
+  width:1px !important;
+  height:1px !important;
+  padding:0 !important;
+  margin:-1px !important;
+  overflow:hidden !important;
+  clip:rect(0,0,0,0) !important;
+  white-space:nowrap !important;
+  border:0 !important;
 }
 
 .hero-title {
@@ -459,13 +473,13 @@ header.premium-site-header .main-nav a:hover{
 
 /* Hero image */
 .hero-image-frame {
-  margin: 22px auto 0;
-  width: min(52%, 560px);
-  border-radius: 22px;
-  padding: 8px;
-  background: var(--bg-glass2);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-soft);
+  margin: 18px auto 0;
+  width: min(90%, 1080px);
+  border-radius: 20px;
+  padding: 5px;
+  background: rgba(5,5,7,.18);
+  border: 1px solid rgba(212,175,55,.28);
+  box-shadow: 0 12px 32px rgba(0,0,0,.28);
 }
 
 .hero-image-frame img {
@@ -1095,7 +1109,7 @@ body::before{
 }
 
   .hero {
-    padding: 112px 5% 32px;
+    padding: 104px 2% 28px;
     min-height: auto;
   }
 
@@ -1104,7 +1118,7 @@ body::before{
     border: none !important;
     box-shadow: none !important;
     border-radius: 0 !important;
-    padding: 0 12px !important;
+    padding: 0 4px !important;
   }
 
   .hero .hero-image-frame,
@@ -1119,8 +1133,8 @@ body::before{
   }
 
   .mobile-hero-img {
-    width:92% !important;
-    max-width:92% !important;
+    width:100% !important;
+    max-width:100% !important;
     height:auto !important;
     margin:18px auto 0 !important;
     border-radius:22px !important;
@@ -1248,11 +1262,11 @@ body::before{
   }
 
   .hero-inner {
-    padding: 22px 18px;
+    padding: 18px 14px;
   }
 
   .hero-image-frame {
-    width: min(44vw, 360px);
+    width: min(88vw, 780px);
     margin-top: 10px;
     padding: 5px;
     border-radius: 18px;
@@ -1348,7 +1362,7 @@ body::before{
 @media (min-width:1401px){
 
   .hero-image-frame{
-    width:min(48%, 520px);
+    width:min(90%, 1080px);
   }
 } 
 /* מובייל לאורך בלבד */
@@ -1459,7 +1473,7 @@ html[lang="en"] .home-guides-banner-en{display:block;}
 <section class="hero">
   <div class="hero-inner">
 
-    <h1 class="hero-title"
+    <h1 class="hero-title hero-title-visually-hidden"
         data-he="נוכחות דיגיטלית מקצועית שמייצרת יתרון על פני המתחרים"
         data-en="A premium digital presence that gives your business a real competitive edge">
     </h1>

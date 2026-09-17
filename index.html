@@ -1392,6 +1392,43 @@ body::before{
 @media(max-width:850px){.portfolio-feature{grid-template-columns:1fr;padding:28px 22px;gap:22px;}.portfolio-montage{width:100%;max-width:680px;justify-self:center;}.portfolio-feature h2{font-size:2rem;}}
 @media(max-width:480px){.portfolio-feature{padding:24px 16px;border-radius:22px;}.portfolio-feature h2{font-size:1.7rem;}.portfolio-feature .package-btn{display:block;text-align:center;}}
 
+/* Homepage guide banner */
+.home-guides-promo{
+  padding:28px 5%;
+  background:#07080b;
+}
+.home-guides-link{
+  display:block;
+  width:min(1180px,100%);
+  margin:0 auto;
+  overflow:hidden;
+  border:1px solid rgba(244,208,111,.65);
+  border-radius:22px;
+  box-shadow:0 16px 44px rgba(0,0,0,.45);
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+}
+.home-guides-link:hover{
+  transform:translateY(-4px);
+  border-color:var(--gold-light);
+  box-shadow:0 22px 58px rgba(0,0,0,.58),0 0 22px rgba(212,175,55,.14);
+}
+.home-guides-link:focus-visible{
+  outline:3px solid var(--gold-light);
+  outline-offset:5px;
+}
+.home-guides-banner{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.home-guides-banner-en{display:none;}
+html[lang="en"] .home-guides-banner-he{display:none;}
+html[lang="en"] .home-guides-banner-en{display:block;}
+@media(max-width:768px){
+  .home-guides-promo{padding:18px 12px;}
+  .home-guides-link{border-radius:14px;}
+}
+
 </style>
 </head>
 
@@ -1527,6 +1564,16 @@ body::before{
     </p>
   </div>
 </div>
+</section>
+
+<!-- GUIDES PROMO -->
+<section class="home-guides-promo" aria-label="מדריכים דיגיטליים">
+  <a class="home-guides-link" href="guides.html" aria-label="מעבר למדריכים הדיגיטליים">
+    <img class="home-guides-banner home-guides-banner-he" src="guides-heb.png"
+         alt="מדריכים והסברים מפורטים לשיפור הנוכחות הדיגיטלית" width="2167" height="726" loading="lazy" decoding="async">
+    <img class="home-guides-banner home-guides-banner-en" src="guides-eng.png"
+         alt="Digital guides to improve your digital presence" width="2167" height="726" loading="lazy" decoding="async">
+  </a>
 </section>
 
 <!-- PACKAGES -->

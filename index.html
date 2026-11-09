@@ -1771,31 +1771,33 @@ html[lang="en"] .home-guides-banner-en{display:block;}
   <h2 class="section-title" data-he="צור קשר" data-en="Contact"></h2>
 
   <div class="contact-wrap">
-    <form action="https://formsubmit.co/ajax/info@digital247now.com"
+    <form action="https://formsubmit.co/info@digital247now.com"
           method="POST"
           id="contactForm">
 
       <input type="hidden" name="_subject" value="New Lead - DIGITAL 247 NOW" />
-      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="https://www.digital247now.com/?contact=sent#contact" />
+      <input type="hidden" name="_blacklist" value="PROMO CODE GRAB,google.com/share.google" />
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none" />
 
-      <input name="name" type="text"
+      <input name="name" type="text" autocomplete="name" minlength="2" maxlength="120"
        placeholder="שם מלא"
        data-placeholder-he="שם מלא"
        data-placeholder-en="Full Name"
        required>
 
-<input name="email" type="email"
+<input name="email" type="email" autocomplete="email" maxlength="254"
        placeholder="אימייל"
        data-placeholder-he="אימייל"
        data-placeholder-en="Email"
        required>
 
-<input name="phone" type="tel"
+<input name="phone" type="tel" autocomplete="tel" maxlength="40"
        placeholder="טלפון"
        data-placeholder-he="טלפון"
        data-placeholder-en="Phone">
 
-<textarea name="message"
+<textarea name="message" maxlength="5000"
           placeholder="ספר לנו על העסק שלך"
           data-placeholder-he="ספר לנו על העסק שלך"
           data-placeholder-en="Tell us about your business"
@@ -1804,7 +1806,7 @@ html[lang="en"] .home-guides-banner-en{display:block;}
       <button type="submit" class="btn btn-primary"
               data-he="שלח פנייה" data-en="Send">שלח פנייה</button>
 
-      <p id="formMessage" style="display:none; margin-top:14px; font-weight:800; color:#f4d06f;">
+      <p id="formMessage" role="status" aria-live="polite" style="display:none; margin-top:14px; font-weight:800; color:#f4d06f;">
         הפנייה נשלחה בהצלחה
       </p>
 
@@ -1812,40 +1814,7 @@ html[lang="en"] .home-guides-banner-en{display:block;}
   </div>
 </section>
 
-<script>
-document.getElementById("contactForm").addEventListener("submit", async function(e) {
-  e.preventDefault();
-
-  const form = this;
-  const data = new FormData(form);
-  const msg = document.getElementById("formMessage");
-
-  msg.style.display = "none";
-
-  try {
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: data,
-      headers: {
-        "Accept": "application/json"
-      }
-    });
-
-    if (response.ok) {
-      msg.innerText = "הפנייה נשלחה בהצלחה";
-      msg.style.display = "block";
-      form.reset();
-    } else {
-      msg.innerText = "אירעה שגיאה. נסה שוב.";
-      msg.style.display = "block";
-    }
-
-  } catch (error) {
-    msg.innerText = "אירעה שגיאה. נסה שוב.";
-    msg.style.display = "block";
-  }
-});
-</script>
+<script src="/contact-form.js?v=1" defer></script>
 
 <!-- WHATSAPP -->
 <a class="float-whatsapp" href="https://wa.me/972552828338" target="_blank">

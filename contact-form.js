@@ -7,7 +7,7 @@
   const button = form.querySelector('button[type="submit"]');
   const strings = {
     name: ['נא להזין שם מלא, ללא קישורים או פרסומות.', 'Please enter your full name without links or advertisements.'],
-    spam: ['לא ניתן לשלוח הודעת פרסומת זו.', 'This promotional submission cannot be sent.'],
+    spam: ['נא להסיר קישורים ומילות פרסום מהשם ומתוכן ההודעה לפני השליחה.', 'Please remove links and promotional words from your name and message before sending.'],
     sent: ['הפנייה נשלחה בהצלחה.', 'Your message has been sent successfully.'],
     sending: ['מעבירים אותך לאימות ושליחה…', 'Continuing to verification and sending…']
   };
@@ -22,9 +22,18 @@
     message.textContent = localized(key);
     message.style.display = 'block';
   }
+  function normalized(value) {
+    return value.normalize('NFKC').replace(/[\u200B-\u200D\u2060\uFEFF]/g, '');
+  }
+  function hasLink(value) {
+    return /(?:https?:\/\/|ftp:\/\/|www\.|(?:[\p{L}\p{N}-]+\.)+(?:[\p{L}]{2,63}|xn--[a-z0-9-]+)(?=$|[^\p{L}\p{N}-]))/iu.test(normalized(value));
+  }
+  function hasBlockedWords(value) {
+    return /(?:^|[^\p{L}\p{N}])(?:casino|casinos|promo|promos|code|codes|קזינו|קוד|קודים|פרומו)(?=$|[^\p{L}\p{N}])/iu.test(normalized(value));
+  }
   function validName() {
     const value = name.value.trim();
-    const containsLink = /https?:\/\/|www\.|google\.com\/share\.google/i.test(value);
+    const containsLink = hasLink(value) || hasBlockedWords(value);
     name.setCustomValidity(value.length < 2 || containsLink ? localized('name') : '');
   }
 
@@ -44,9 +53,8 @@
       return;
     }
     const honey = form.elements.namedItem('_honey');
-    const values = ['name', 'email', 'phone', 'message']
-      .map(key => form.elements.namedItem(key).value).join(' ');
-    if (honey.value || /promo\s+code\s+grab|google\.com\/share\.google/i.test(values)) {
+    const messageText = form.elements.namedItem('message').value;
+    if (honey.value || hasLink(messageText) || hasBlockedWords(messageText)) {
       event.preventDefault();
       showMessage('spam');
       return;

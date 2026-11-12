@@ -7,6 +7,7 @@
   const button = form.querySelector('button[type="submit"]');
   const strings = {
     name: ['נא להזין שם מלא, ללא קישורים או פרסומות.', 'Please enter your full name without links or advertisements.'],
+    links: ['Links are not allowed in the name or message. Remove the link to send.', 'Links are not allowed in the name or message. Remove the link to send.'],
     spam: ['נא להסיר קישורים ומילות פרסום מהשם ומתוכן ההודעה לפני השליחה.', 'Please remove links and promotional words from your name and message before sending.'],
     sent: ['הפנייה נשלחה בהצלחה.', 'Your message has been sent successfully.'],
     sending: ['מעבירים אותך לאימות ושליחה…', 'Continuing to verification and sending…']
@@ -34,20 +35,27 @@
   function validName() {
     const value = name.value.trim();
     const containsLink = hasLink(value) || hasBlockedWords(value);
-    name.setCustomValidity(value.length < 2 || containsLink ? localized('name') : '');
+    name.setCustomValidity(hasLink(value) ? localized('links') : value.length < 2 || containsLink ? localized('name') : '');
   }
 
-  name.addEventListener('input', () => {
+  const messageField = form.elements.namedItem('message');
+  function validateLinks() {
     validName();
-    message.style.display = 'none';
-  });
+    const blocked = hasLink(name.value) || hasLink(messageField.value);
+    messageField.setCustomValidity(hasLink(messageField.value) ? localized('links') : '');
+    button.disabled = submitting || blocked;
+    if (blocked) showMessage('links');
+    else if (strings.links.includes(message.textContent)) message.style.display = 'none';
+  }
+  name.addEventListener('input', validateLinks);
+  messageField.addEventListener('input', validateLinks);
   form.addEventListener('submit', event => {
     if (submitting) {
       event.preventDefault();
       return;
     }
     message.style.display = 'none';
-    validName();
+    validateLinks();
     if (!form.reportValidity()) {
       event.preventDefault();
       return;
@@ -75,7 +83,7 @@
   // Back navigation from verification must leave the form usable.
   window.addEventListener('pageshow', () => {
     submitting = false;
-    button.disabled = false;
+    validateLinks();
     button.textContent = button.getAttribute(document.documentElement.lang === 'en' ? 'data-en' : 'data-he');
   });
 })();

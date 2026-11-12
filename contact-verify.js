@@ -6,7 +6,7 @@
   const endpoint = form.dataset.contactEndpoint || 'https://digital247-contact.productsbest59.workers.dev/contact';
   const sitekey = form.dataset.turnstileSitekey || '0x4AAAAAAF7S8wprw8W-prPg';
   const strings = {
-    links: ['אסור להזין קישורים בשם או בתוכן ההודעה. הסר את הקישור כדי לשלוח.', 'Links are not allowed in the name or message. Remove the link to send.'],
+    links: ['Links are not allowed in the name or message. Remove the link to send.', 'Links are not allowed in the name or message. Remove the link to send.'],
     unavailable: ['השליחה אינה זמינה כרגע. נסה שוב בעוד כמה דקות.', 'Sending is temporarily unavailable. Please try again in a few minutes.'],
     verification: ['נא להשלים את האימות ולנסות שוב.', 'Please complete the verification and try again.'],
     blocked: ['השליחה נחסמה ל־24 שעות בגלל קישור או תוכן פרסומי בשם או בהודעה.', 'Sending is blocked for 24 hours because the name or message contained a link or promotional content.'],
